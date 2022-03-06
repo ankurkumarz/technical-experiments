@@ -1,6 +1,7 @@
 # Argo CD
 
-[Argo CD](https://github.com/argoproj/argo-cd)is a declarative, GitOps continuous delivery tool for Kubernetes. 
+[Argo CD](https://github.com/argoproj/argo-cd) is a declarative, GitOps continuous delivery tool for Kubernetes. It is part of [Argo project](https://argoproj.github.io/), which has 30+ repositories and has projects as *Argo Workflow, Argo Rollouts, and Argo Events*.
+
 ### Key objectives 
 - Application definitions, configurations, and environments should be declarative and version controlled. 
 - Application deployment and lifecycle management should be automated, auditable, and easy to understand.

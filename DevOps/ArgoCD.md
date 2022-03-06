@@ -71,4 +71,4 @@ argocd app create guestbook --repo https://github.com/argoproj/argocd-example-ap
 ## Compare ArgoCD vs. Flux
 - Read the article: https://thenewstack.io/gitops-on-kubernetes-deciding-between-argo-cd-and-flux
 
-![ArgoCD vs. Flux](images/ArgoCD-flux.png)
+![ArgoCD vs. Flux](images/argocd-flux.png)

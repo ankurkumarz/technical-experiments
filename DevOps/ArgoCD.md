@@ -18,6 +18,7 @@
 # Argo CD Architecture
 
 ![Argo CD Architecture](https://argo-cd.readthedocs.io/en/stable/assets/argocd_architecture.png)
+</br>
 (Source: https://argo-cd.readthedocs.io/en/stable/)
 
 

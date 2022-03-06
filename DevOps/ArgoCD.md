@@ -1,8 +1,14 @@
 # ArgoCD
 
-Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.The documentation is available at below links:
-- https://argo-cd.readthedocs.io/en/stable/
-- Mar 2022
+[Argo CD](https://argoproj.github.io/) is a declarative, GitOps continuous delivery tool for Kubernetes.
+
+## Links
+- [Doccumentation](https://argo-cd.readthedocs.io/)
+- [Project Home Page](https://argoproj.github.io/)
+- [GitHub Repo](https://github.com/argoproj/argo-workflows)
+
+
+> Reviewed in Mar 2022
 
 # Argo CD Architecture
 
@@ -49,3 +55,16 @@ argocd app create guestbook --repo https://github.com/argoproj/argocd-example-ap
 
 ![Local Dashboard](images/argocd-local.png)
 
+## Key Observations
+- [Intuit](https://blog.argoproj.io/introducing-argo-cd-declarative-continuous-delivery-for-kubernetes-da2a73a780cd) started ArgoCD and currently using to run its production workload of 100+ nodes cluster
+- Argo was accepted to CNCF on Apr, 2020 and is at the Incubating project maturity level.
+- **Companies** using Red Hat, Google, Ticketmaster, WordPress, NVIDIA, Tesla, Adobe
+- ArgoCD provides GUI in comparison to Flux CD
+- Supports raw Kubernetes manifests (YAML), Kustomize, and Helm.
+- Argo CD has RBAC-based access control and it is independent of Kubernetes.
+- **Deployment**: Argo CD can be configured in a “pull” (instance of Argo CD on each cluster) or “push” (one Argo CD instance connecting to many clusters).
+
+## Compare ArgoCD vs. Flux
+- Read the article: https://thenewstack.io/gitops-on-kubernetes-deciding-between-argo-cd-and-flux
+
+![ArgoCD vs. Flux](images/ArgoCD-flux.png)

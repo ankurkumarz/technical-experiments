@@ -39,8 +39,9 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
   - [AWS Fully Managed Service](https://aws.amazon.com/grafana/)
   - Grafana Labs signed partnership with Microsoft Azure to deliver first-party Grafana Service. [Click here](https://grafana.com/about/press/2021/11/10/grafana-labs-and-microsoft-partner-to-deliver-new-first-party-microsoft-azure-service/) to read more.
 
-- End-to-end Observability
+- End-to-end Observability (Grafana Labs offers a managed service)
   - Visualization with Grafana
   - Metrics with Prometheus and Graphite
   - Logs with Loki
   - Traces with Tempo
+![Grafana Cloud](images/grafana-cloud.png)

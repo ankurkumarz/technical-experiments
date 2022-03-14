@@ -44,4 +44,5 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
   - Metrics with Prometheus and Graphite
   - Logs with Loki
   - Traces with Tempo
+
 ![Grafana Cloud](images/grafana-cloud.png)

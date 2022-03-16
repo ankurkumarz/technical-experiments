@@ -6,10 +6,10 @@
 # Architecture
 
 ![Architecture](https://dapr.io/images/service-invocation.png)
-
 # Sample Reference Application
 
-![Reference Application](https://github.com/dapr/quickstarts/blob/v1.6.0/hello-kubernetes/img/Architecture_Diagram.png)
+![Reference Application](images/Architecture_Diagram.png)
+[Source](https://github.com/dapr/quickstarts/tree/v1.6.0/hello-kubernetes)
 
 # Local Installation (using Kubernetes)
 
@@ -23,5 +23,3 @@ brew install dapr/tap/dapr-cli
 ```
 dapr init --kubernetes --wait
 ```
-
-- 

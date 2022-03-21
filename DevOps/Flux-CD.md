@@ -10,3 +10,22 @@ Flux Links
 
 
 # Local setup
+- Guide: https://fluxcd.io/docs/get-started/
+- Install using brew
+```
+brew install fluxcd/tap/fluxbrew install fluxcd/tap/flux
+export GITHUB_TOKEN=*<PUT_TOKEN>*
+export GITHUB_USER=ankurkumarz
+flux check --pre
+```
+- Enable Flux for a project repository
+```
+
+flux bootstrap github \
+--owner=$GITHUB_USER\
+--repository=fleet-infra \
+--branch=main \
+--path=./clusters/my-cluster \
+--personal
+
+```

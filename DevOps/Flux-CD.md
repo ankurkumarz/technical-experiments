@@ -14,7 +14,7 @@ Flux Links
 - Install using brew
 ```
 brew install fluxcd/tap/fluxbrew install fluxcd/tap/flux
-export GITHUB_TOKEN=*<PUT_TOKEN>*
+export GITHUB_TOKEN=<PUT_TOKEN>
 export GITHUB_USER=ankurkumarz
 flux check --pre
 ```

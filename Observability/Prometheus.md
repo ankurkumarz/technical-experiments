@@ -28,10 +28,28 @@
 - Observability/APM Vendors - New Relic, Dynatrace, etc.
 
 # Local Installation
+Any of the below options:
+- Download the JAR and Run directly
+- Use brew install
+```
+brew install prometheus
+
+#Run directly with 
+/usr/local/opt/prometheus/bin/prometheus_brew_services
+
+#Or automatic installation
+brew services restart prometheus
+```
 - Docker with default configuration
 ```
 docker run -p 9090:9090 prom/prometheus
 ```
+
+## Local access
+- URL: http://localhost:9090/, http://localhost:9090/metrics
+- Enter Expression: *prometheus_target_interval_length_seconds* or *rate(prometheus_tsdb_head_chunks_created_total[1m])*
+
+Read more about [getting started here](https://prometheus.io/docs/prometheus/latest/getting_started/).
 
 # Managed Services
 - [AWS Managed Service for Prometheus](https://aws.amazon.com/prometheus/)

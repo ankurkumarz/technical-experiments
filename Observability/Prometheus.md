@@ -44,7 +44,6 @@ brew services restart prometheus
 ```
 docker run -p 9090:9090 prom/prometheus
 ```
-
 ## Local access
 - URL: http://localhost:9090/, http://localhost:9090/metrics
 - Enter Expression: *prometheus_target_interval_length_seconds* or *rate(prometheus_tsdb_head_chunks_created_total[1m])*

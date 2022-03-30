@@ -1,11 +1,11 @@
 # Prometheus
-- is an open-source systems monitoring and alerting toolkit originally built at SoundCloud (2021).
+- [Prometheus](https://prometheus.io/) is an open-source systems monitoring and alerting toolkit originally built at SoundCloud (2021).
 - Prometheus collects and stores its metrics as time series data
 - Prometheus was the second project accepted into the Cloud Native Computing Foundation after Kubernetes, and also the second to graduate.
 - Prometheus and Grafana can be used as complementary services that, together, provide a robust time-series database with excellent data visualization.
+- Primarily relies on Polling to pull data from the application or any system. [Client libraries](https://prometheus.io/docs/instrumenting/clientlibs/) are available for instrumenting the applications in many supported languages like Java, Python, Go, etc.
 
 ## Main Features (Official Docs)
-
 [Click here](https://prometheus.io/docs/introduction/overview/) for official docs.
 
 - Offfers a multi-dimensional data model with time series data

@@ -6,6 +6,7 @@
 
 ## Low-code platforms
 
-| Vendor | Solution | |
-| -------|----------| |
-
+| Vendor     | Solution | Solution Description | Industry Recognitions |
+| -------- | ------------------------------ | --------------------------- | -- | 
+| Appian | Appian | | |
+| Mendix | Mendix | | |

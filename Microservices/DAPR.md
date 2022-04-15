@@ -37,6 +37,13 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm install redis bitnami/redis
 ```
+- Create 2 files to install REDIS:redis-state.yaml, redis-pubsub.yaml (as per details [here](https://docs.dapr.io/getting-started/tutorials/configure-state-pubsub/#step-1-create-a-redis-store))
+- Install in K8S 
+**quickstarts/tutorials/hello-kubernetes/deploy**
+```
+kubectl apply -f redis-state.yaml
+kubectl apply -f redis-pubsub.yaml
+```
 
 ## DAPR with Docker (No K8S)
 - Run DAPR with docker

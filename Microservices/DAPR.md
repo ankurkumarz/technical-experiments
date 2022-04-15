@@ -56,7 +56,8 @@ dapr uninstall
 ```
 dapr dashboard -k -n <your-namespace>.
 ```
-
+![DAPR UI Dashboards](images/dapr-ui-dashboard.png)
+![DAPR State Management](images/dapr-components.png)
 # Key Takeaways
 - DAPR usage is more to provide developer decoupled runtime to address service-to-service communication, state management for stateful services, PUB/SUB for event-driven services, observability at fine-grained level, and related needs.
 - For example, you can also directly use REDIS in your application code for state management but DAPR runtime provides abstraction so that you don't have to worry about integration with state store. You will simply interface with DAPR and if there is need to change from REDIS to cloud-provider managed state such as DynamoDB, AWS DynamoDB, it can happen without any code change.
@@ -68,3 +69,7 @@ dapr dashboard -k -n <your-namespace>.
 - If you need encrypted communication between services, need to use Service Mesh
 - [Click here](https://docs.dapr.io/concepts/service-mesh/) to read the official documentation
 ![Architecture](https://docs.dapr.io/images/service-mesh.png)
+
+# References
+- [Baeldung example with Spring Cloud Gateway (without Kubernetes](https://www.baeldung.com/dapr-spring-cloud-gateway)
+- [DAPR Tutorials](https://github.com/dapr/quickstarts/tree/master/tutorials/hello-kubernetes)

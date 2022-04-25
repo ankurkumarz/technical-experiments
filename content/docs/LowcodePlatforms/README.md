@@ -1,3 +1,7 @@
+---
+bookHidden: true
+---
+
 # Low-code Platforms (LCAP)
 
 ## Gartner Definition of Low-code

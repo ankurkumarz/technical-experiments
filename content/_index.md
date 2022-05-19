@@ -90,6 +90,16 @@ enabling data insights at scale
 Earlier
 - [Software Architecture in Practice](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=30264)
 - [Software Systems Architecture - Viewpoints & Perspectives](https://www.viewpoints-and-perspectives.info/)
+- [Patterns of Enterprise Application Architecture](https://martinfowler.com/books/eaa.html)
 - Gang of Four Design Patterns
+- TOGAF 9.0 Foundation
+- 97 Things Every Software Architect Should Know
+- [Documenting Software Architecture](https://www.sei.cmu.edu/education-outreach/courses/course.cfm?coursecode=P33)
+- Head First Design Patterns
+- [UML Distilled](https://martinfowler.com/books/uml.html)
+- Effective Java
+- Core Java
+- Enterprise JavaBeans
+- Computer Networks (Tanebaum)
 ## Contributors
 - [Ankur Kumar](https://github.com/ankurkumarz)

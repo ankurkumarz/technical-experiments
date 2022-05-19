@@ -57,11 +57,11 @@ enabling data insights at scale
 - [Kubecost](https://www.kubecost.com/) - real-time cost visibility and insights for teams using Kubernetes
 - [Lightstep](https://lightstep.com/) - Monitoring, observability, and incident response for the world’s most reliable systems
 
-## Developer Portals (used by me)
+## Developer Portals
 - [Cisco Devnet](https://www.argon.io/)
 - [AxonIQ Dev Portal](https://developer.axoniq.io/)
 
-## Learning Portals (used by me)
+## Learning Portals
 - [Oreilly Learning](https://learning.oreilly.com/home/)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [Azure Learning](https://docs.microsoft.com/en-us/learn/)

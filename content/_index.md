@@ -58,8 +58,10 @@ enabling data insights at scale
 - [Lightstep](https://lightstep.com/) - Monitoring, observability, and incident response for the world’s most reliable systems
 
 ## Developer Portals
-- [Cisco Devnet](https://www.argon.io/)
+- [Cisco Devnet](https://developer.cisco.com/)
 - [AxonIQ Dev Portal](https://developer.axoniq.io/)
+- [Hasura Cloud](https://cloud.hasura.io/projects)
+- [Grafana Portal](https://ankurkumarz.grafana.net/login)
 
 ## Learning Portals
 - [Oreilly Learning](https://learning.oreilly.com/home/)

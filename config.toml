@@ -1,6 +1,6 @@
 baseURL = 'https://techexperiment.onrender.com/'
 languageCode = 'en-us'
-title = 'Technical Experiments by Ankur Kumar'
+title = 'Technical Experiments by <a href="https://twitter.com/ankurkumarz">Ankur Kumar</a>'
 theme = "hugo-book"
 [markup]
   defaultMarkdownHandler = 'goldmark'

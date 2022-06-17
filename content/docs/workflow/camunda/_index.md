@@ -47,7 +47,6 @@ development. It supports MySQL, MariaDB, IBM DB2, Amazon Aurora, Azure SQL, SQL 
 ![Camunda Console for Cluster](camunda-console.png)
 
 - Installed Camunda Modeler (available as Opensource)
-
 ## Sample Applications
 - Create a Microservices orchestration flow using the modeler like below:
 ![Camunda Modeler](camunda-modeler.png)
@@ -60,6 +59,13 @@ zbctl create instance "order-process"
 - More code examples are available here: https://github.com/camunda/camunda-bpm-examples
 - Connect your local desktop setup with cloud as shown below for deployment:
 ![Deployment](camunda-desktop.png)
+
+## Screenshots
+- Optmize dashboard listing all created dashboards (ready-made available)
+![Dashboards](camunda--optimize-dashboard.png)
+- Optimize Heatmap displays the incidence of higher outliers based on duration. Calculated by z-score.
+![Optimize Dashboard](camunda-optimize-heatmap.png)
+![Optimize Dashboard](camunda-optimize-dashboard-2.png)
 ## Useful Links:
 - Downloads: https://camunda.com/download/modeler/
 - https://camunda.com/blog/2021/10/start-and-step-through-a-process-with-rest-feat-swaggerui/

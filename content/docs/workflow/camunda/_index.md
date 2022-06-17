@@ -19,6 +19,7 @@
 
 ## Architecture
 - Overall Technology Stack: Java, Spring Boot, Kafka, gRPC (Zeebee components communication), GraphQL (used by Tasklist), ELK (logs for Zeebee and others)
+ - [Camunda 7](https://docs.camunda.org/manual/7.17/) was Java EE & Spring Boot based and Camunda 8 has been reengineered towards cloud-native and microservices.
 - GitHub Repository: https://github.com/camunda
 - [Platform Components](https://camunda.com/platform/): Zeebe, Modeler, Operate, Tasklist & Optimize.
 - [Modeler](https://docs.camunda.io/docs/components/modeler/about-modeler/): Modeling following BPMN/DNM standards visually (web & desktop app)
@@ -37,9 +38,7 @@ Image Source: https://camunda.com/platform-7/
 - Read about Camunda platform reference architecture by [clicking here](https://camunda.com/wp-content/uploads/2020/09/TB-Camunda_Reference_Architecture-092520.pdf):
 - Camunda Process Engine is built using Spring Boot. It supports embedded deployment (as a library) or container-managed as an independent container, or standalone process engine server deployed in VM. Docker image is available at [their registry](https://registry.camunda.cloud/) built using Harbor.
 -  Camunda recommends Oracle or PostgreSQL for production and H2 for
-development. It supports MySQL, MariaDB, IBM DB2, Amazon Aurora, Azure SQL, SQL Server, and CockroachDB as well.
-
-## Alternative Options
+development. It supports MySQL, MariaDB, IBM DB2, Amazon Aurora, Azure SQL, SQL Server, and CockroachDB as well
 
 ## Access/Setup
 - Trial: SaaS is available as a free account with collaborative modeling features for unlimited BPMN/DMN models.
@@ -56,8 +55,11 @@ development. It supports MySQL, MariaDB, IBM DB2, Amazon Aurora, Azure SQL, SQL 
 ```
 zbctl create instance "order-process"
 ```
-
-
+- Created a simple process to call a REST endpoint:
+![Sample App](camunda-sample-process.png)
+- More code examples are available here: https://github.com/camunda/camunda-bpm-examples
+- Connect your local desktop setup with cloud as shown below for deployment:
+![Deployment](camunda-desktop.png)
 ## Useful Links:
 - Downloads: https://camunda.com/download/modeler/
 - https://camunda.com/blog/2021/10/start-and-step-through-a-process-with-rest-feat-swaggerui/

@@ -1,9 +1,13 @@
 # OpenFaaS
 
 ## Context
-Low-code development Platform
-
-
+- OpenFaaS makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boiler-plate coding. 
+- Supports Opensource framework avoiding vendor lock-in
+- Write functions in any language and package them in Docker/OCI-format containers
+- Supports [PLONK](https://www.openfaas.com/blog/plonk-stack/) (Prometheus, Linkerd/Linux, OpenFaas, NATS, K8S) technology stack:
+![Architecture Layer](https://github.com/openfaas/faas/raw/master/docs/of-layer-overview.png)
+- Conceptual flow:
+![Flow](https://github.com/openfaas/faas/blob/master/docs/of-workflow.png?raw=true)
 ## Local setup
 
 - Installed [Multipass](https://multipass.run/) on MAC (instead of using Docker, it is lightweight). Test Multipass using:

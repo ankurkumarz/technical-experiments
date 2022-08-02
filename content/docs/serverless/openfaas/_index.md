@@ -5,6 +5,7 @@ title: OpenFaaS
 
 ## Context
 - OpenFaaS makes it easy for developers to deploy event-driven functions and microservices to Kubernetes without repetitive, boiler-plate coding. 
+- [OpenFaaS Pro](https://docs.openfaas.com/openfaas-pro/introduction/) is a commercially licensed distribution of OpenFaaS with additional features, configurations and commercial support from the founders. 
 - Supports Opensource framework avoiding vendor lock-in
 - Write functions in any language and package them in Docker/OCI-format containers
 - Supports [PLONK](https://www.openfaas.com/blog/plonk-stack/) (Prometheus, Linkerd/Linux, OpenFaas, NATS, K8S) technology stack:

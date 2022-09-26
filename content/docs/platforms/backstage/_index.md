@@ -36,5 +36,13 @@ yarn add --cwd packages/backend pg
 ```
 - Update app-config.yaml:
 ```
-
+ database:
+    #client: better-sqlite3
+    #connection: ':memory:'
+    client: pg
+    connection:
+      host: 'localhost'
+      port: 5432
+      user: backstage
+      password: secret
 ```

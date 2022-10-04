@@ -29,4 +29,5 @@ Apart from default plugins, these are relevant while it is contextual:
 - Audit Log - for details of who, when and what actions
 - Logstask / Kafka Logs / Syslog - for sending logs to centralized logging server
 - Terraform - wrapper for Terraform
-- SonarQube - for code quality
+- SonarQube - for code quality. Configure as per [instructions here](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/). Manage Jenkins -> Configure system
+- Snyk Security - [Installation Instructions](https://github.com/jenkinsci/snyk-security-scanner-plugin)

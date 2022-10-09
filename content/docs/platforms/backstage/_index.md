@@ -13,6 +13,9 @@ Demo
 - **Online Demo**: https://demo.backstage.io
 
 
+
+
+
 # Local setup
 - Guide: https://backstage.io/docs/getting-started/
 - Crate a new backstage app using npx:
@@ -47,6 +50,12 @@ yarn add --cwd packages/backend pg
       password: ****
 ```
 
+## Key Plugins
+A plugin might needs to be installed on frontend as well as backend (NodeJS) applications.
+
+- TechDocs
+- SonarQube
+- Jenkins
 ## Configuring Sonar
 - [Install Sonar Frontend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube)
 - [Install Sonar Backend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube-backend)
@@ -82,5 +91,22 @@ sonarqube:
     jenkins.io/job-full-name: "devlocal:cloudcost-inspector"
     sonarqube.org/project-key: "com.ps.cloudcostinspector:CloudCostInspector"
 ```
+
+
+## Configuring TechDocs
+- TechDocs is Spotify’s homegrown docs-like-code solution built directly into Backstage. 
+- It uses [MkDocs](https://www.mkdocs.org/) as the underlying engine as static site generator.
+- You can generate documents outside the Backstage (separate CI/CD)
+- Detailed instructions are [here](https://backstage.io/docs/features/techdocs/getting-started#disabling-docker-in-docker-situation-optional):
+- [TechDocs configuration options](https://backstage.io/docs/features/techdocs/configuration)
+
+```
+brew install graphviz
+brew install plantuml
+pip install mkdocs
+pip install mkdocs-techdocs-core==1.1.7
+techdocs-cli serve --no-docker --for testing docs
+```
+
 
 ## Configuring Jenkins

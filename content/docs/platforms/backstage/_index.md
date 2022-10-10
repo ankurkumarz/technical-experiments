@@ -56,6 +56,7 @@ A plugin might needs to be installed on frontend as well as backend (NodeJS) app
 - TechDocs
 - SonarQube
 - Jenkins
+- [Google Lighthouse](https://github.com/backstage/backstage/tree/master/plugins/lighthouse)
 ## Configuring Sonar
 - [Install Sonar Frontend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube)
 - [Install Sonar Backend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube-backend)
@@ -107,6 +108,11 @@ pip install mkdocs
 pip install mkdocs-techdocs-core==1.1.7
 techdocs-cli serve --no-docker --for testing docs
 ```
-
+## Configure Lighthouse
+- You need to install Lighthouse Plugin
+- Lighthouse Audit Service is a separate Microservice, created by [Spotify](https://github.com/spotify/lighthouse-audit-service). This needs to run separately as a container. [See instructions here.](https://roadie.io/blog/backstage-lighthouse-plugin/)
+- You need to create a DB Schema in PostgreSQL (see below diagram), and Run Lighthouse audit service
+- Backstage URL: http://localhost:3000/lighthouse
+![Lighthouse and Backstage Schema](lighthouse-db.png)
 
 ## Configuring Jenkins

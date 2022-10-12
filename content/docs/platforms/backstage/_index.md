@@ -57,6 +57,15 @@ A plugin might needs to be installed on frontend as well as backend (NodeJS) app
 - SonarQube
 - Jenkins
 - [Google Lighthouse](https://github.com/backstage/backstage/tree/master/plugins/lighthouse)
+- [ADR](https://github.com/backstage/backstage/tree/master/plugins/adr)
+- [ADR Backend](https://github.com/backstage/backstage/blob/master/plugins/adr-backend/README.md)
+- [Cost Insights](https://github.com/backstage/backstage/blob/master/plugins/cost-insights/src/example/templates/CostInsightsClient.ts)
+- Sometimes plugin installation does not work. Use below:
+```
+yarn install --check-files
+yarn tsc
+```
+
 ## Configuring Sonar
 - [Install Sonar Frontend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube)
 - [Install Sonar Backend Plugin](https://github.com/backstage/backstage/tree/master/plugins/sonarqube-backend)
@@ -114,5 +123,6 @@ techdocs-cli serve --no-docker --for testing docs
 - You need to create a DB Schema in PostgreSQL (see below diagram), and Run Lighthouse audit service
 - Backstage URL: http://localhost:3000/lighthouse
 ![Lighthouse and Backstage Schema](lighthouse-db.png)
+- the sidebar is managed inside packages/app/src/components/Root/Root.tsx
 
 ## Configuring Jenkins

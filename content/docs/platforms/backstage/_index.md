@@ -54,8 +54,8 @@ yarn add --cwd packages/backend pg
 A plugin might needs to be installed on frontend as well as backend (NodeJS) applications.
 
 - TechDocs
-- SonarQube
-- Jenkins
+- [SonarQube](https://github.com/backstage/backstage/blob/master/plugins/sonarqube/README.md)
+- [Jenkins](https://github.com/backstage/backstage/tree/master/plugins/jenkins)
 - [Google Lighthouse](https://github.com/backstage/backstage/tree/master/plugins/lighthouse)
 - [ADR](https://github.com/backstage/backstage/tree/master/plugins/adr)
 - [ADR Backend](https://github.com/backstage/backstage/blob/master/plugins/adr-backend/README.md)

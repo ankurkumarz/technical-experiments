@@ -56,6 +56,7 @@ enabling data insights at scale
 - [InfluxDB Cloud](https://www.influxdata.com/get-influxdb/) - time series database as a service
 - [Kubecost](https://www.kubecost.com/) - real-time cost visibility and insights for teams using Kubernetes
 - [Lightstep](https://lightstep.com/) - Monitoring, observability, and incident response for the world’s most reliable systems
+- [Bytebase](https://golang.ch/a-golang-based-database-ci-cd-solution-for-developers-and-dbas/ - CI/CD solution for database)
 
 ## Developer Portals
 - [Cisco Devnet](https://developer.cisco.com/)

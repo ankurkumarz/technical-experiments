@@ -58,6 +58,8 @@ enabling data insights at scale
 - [Lightstep](https://lightstep.com/) - Monitoring, observability, and incident response for the world’s most reliable systems
 - [Bytebase](https://golang.ch/a-golang-based-database-ci-cd-solution-for-developers-and-dbas/)- CI/CD solution for database
 ## Developer Portals
+- [Backstage](https://backstage.io)
+- [Humantic](https://humanitec.com/)
 - [Cisco Devnet](https://developer.cisco.com/)
 - [AxonIQ Dev Portal](https://developer.axoniq.io/)
 - [Hasura Cloud](https://cloud.hasura.io/projects)

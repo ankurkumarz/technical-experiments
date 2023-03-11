@@ -35,11 +35,12 @@ Cons/Cautions:
 
 - Interface to publish API:
 
-![Hasura Console](hasura-console.png)
+![Hasura Console](hasura-dashboard.png)
 
 ![Monitoring Dashboard](hasura-monitoring.png)
 
 ## Other Competitors
+
 - [Apollo GraphOS](https://www.apollographql.com/)
 - [WunderGraph](https://wundergraph.com/)
 - [Firebase (Google Cloud)](https://firebase.google.com/products-build)

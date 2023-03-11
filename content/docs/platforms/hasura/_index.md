@@ -18,6 +18,8 @@ title: Hasura
 - You can connect below databases:
 ![Hasura Connect DB](hasura-db.png)
 
+- It uses [Docusaurus](https://docusaurus.io/) for documentation.
+
 ## Pros/Cons
 
 Pros:
@@ -36,6 +38,14 @@ Cons/Cautions:
 ![Hasura Console](hasura-console.png)
 
 ![Monitoring Dashboard](hasura-monitoring.png)
+
+## Other Competitors
+- [Apollo GraphOS](https://www.apollographql.com/)
+- [WunderGraph](https://wundergraph.com/)
+- [Firebase (Google Cloud)](https://firebase.google.com/products-build)
+- [AWS AppSync](https://aws.amazon.com/appsync/)
+- [Postgraphile](https://www.graphile.org/postgraphile/)
+- [Supabase](https://supabase.com/)
 
 ## Architecture Patterns
 

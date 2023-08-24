@@ -1,9 +1,11 @@
 # Grafana
+
 - [Grafana](https://grafana.com/) is an opensource observability tool to query and visualize the data using interactive dashboards, etc.
 - Grafana is one of the most popular companion solution with Prometheus, which can be queried from Grafana.
 - Grafana supports other time-series databases like Prometheus,  InfluxDB, and Graphite, monitoring platforms such as Sensu, Icinga, Checkmk,Zabbix, Netdata, and PRTG; SIEMs such as Elasticsearch and Splunk; and other data sources.
 - GitHub Repo: https://github.com/grafana/grafana
 - Developer: **Grafana Labs**, Language: Go
+
 # Cloud Offering
 - Grafana offers managed service as a cloud offering. You can register for Free to use **Grafana Cloud** using GitHub or Google account credentials by [clicking here](https://grafana.com/auth/sign-in/?plcmt=top-nav&cta=myaccount).
 - Check out [Pricing](https://grafana.com/pricing/) here. Their Free tier offers 3 users, 14 day retention, Synthetic, and Alerting with **10k metrics + 50GB logs + 50GB traces**.
@@ -29,6 +31,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 ![Kubernetes](grafana-dashboard.png)
 
 # Key Findings
+
 - Grafana is a de facto standard for visualization with real-time timeseries database like Prometheus
 - Key competition: Elastic's Kibana, Cloud-providers native experience (e.g. AWS CloudWatch, Azure Monitor) or Observability/APM solutions like Dynatrace, New Relic, Splunk, etc.
 - Grafana can be integrate with all the above tools to visualize data in a single place.
@@ -44,5 +47,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
   - Metrics with Prometheus and Graphite
   - Logs with Loki
   - Traces with Tempo
+
 ## Managed Service by Grafana Cloud by Grafana Labs
+
 ![Grafana Cloud](images/grafana-cloud.png)

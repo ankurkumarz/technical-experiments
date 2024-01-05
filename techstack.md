@@ -32,7 +32,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [ankurkumarz/technical-experiments](https://github.com/ankurkumarz/technical-experiments)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|13<br/>Tools used|12/14/23 <br/>Report generated|
+|14<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -142,13 +142,14 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (3)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (4)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (3)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (4)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[auto-changelog](https://www.npmjs.com/auto-changelog)|v1.16.1|04/24/22|ankurkumarz |MIT|N/A|
+|[cssnano](https://www.npmjs.com/cssnano)|v3.10.0|04/24/22|ankurkumarz |MIT|N/A|
 |[postcss-cli](https://www.npmjs.com/postcss-cli)|v7.1.0|04/24/22|ankurkumarz |MIT|N/A|
 |[postcss-cssnext](https://www.npmjs.com/postcss-cssnext)|v2.10.0|04/24/22|ankurkumarz |MIT|N/A|
 

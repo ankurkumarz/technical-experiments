@@ -1,11 +1,12 @@
 repo_name: ankurkumarz/technical-experiments
 report_id: e77d1b7ecfd6f0979fae5c249e02db67
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T15:17:23+00:00'
+timestamp: '2024-01-05T08:24:44+00:00'
 requested_by: ankurkumarz
 provider: github
 branch: main
-detected_tools_count: 13
+detected_tools_count: 14
 tools:
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments
   detection_source: Repo Metadata
 - name: Rust
   description: A safe, concurrent, practical language
@@ -34,6 +37,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1070/v7txhrjp9pdqrkdtxxp0.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments
   detection_source: Repo Metadata
 - name: tachyons
   description: Quickly build and design new UI without writing css
@@ -44,6 +48,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Front-End Frameworks
   image_url: https://img.stackshare.io/service/4927/GQu0BPhA_200x200.jpg
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/package.json
   detection_source: themes/ananke/package.json
   last_updated_by: ankurkumarz
   last_updated_on: 2022-04-24 04:59:55.000000000 Z
@@ -55,6 +60,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/layouts/robots.txt
   detection_source: themes/ananke/layouts/robots.txt
   last_updated_by: ankurkumarz
   last_updated_on: 2022-04-24 04:59:55.000000000 Z
@@ -66,6 +72,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments
   detection_source: Repo Metadata
 - name: npm
   description: The package manager for JavaScript.
@@ -75,6 +82,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/package.json
   detection_source: themes/ananke/package.json
   last_updated_by: ankurkumarz
   last_updated_on: 2022-04-24 04:59:55.000000000 Z
@@ -84,6 +92,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/content/docs/programming/rust-webassembly/code/rust-wasm/index.html
   detection_source: content/docs/programming/rust-webassembly/code/rust-wasm/index.html
   last_updated_by: ankurkumarz
   last_updated_on: 2022-06-03 21:29:59.000000000 Z
@@ -95,6 +104,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/layouts/robots.txt
   detection_source: themes/ananke/layouts/robots.txt
   last_updated_by: ankurkumarz
   last_updated_on: 2022-04-24 04:59:55.000000000 Z
@@ -104,6 +114,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/6612/ehMiE-wz_normal.jpg
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/package.json
   detection_source: themes/ananke/package.json
   last_updated_by: ankurkumarz
   last_updated_on: 2022-04-24 04:59:55.000000000 Z
@@ -118,6 +129,20 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17867/default_369b3bf3ef062123a581e4817f09cb0004de7ff6.png
+  detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/package.json
+  detection_source: themes/ananke/package.json
+  last_updated_by: ankurkumarz
+  last_updated_on: 2022-04-24 04:59:55.000000000 Z
+- name: cssnano
+  description: A modular minifier, built on top of the PostCSS ecosystem
+  package_url: https://www.npmjs.com/cssnano
+  version: 3.10.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16102/default_efe4f0184d007a28e793d89a59e058b742bc9177.png
   detection_source_url: https://github.com/ankurkumarz/technical-experiments/blob/main/themes/ananke/package.json
   detection_source: themes/ananke/package.json
   last_updated_by: ankurkumarz

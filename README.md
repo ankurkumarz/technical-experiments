@@ -1,6 +1,7 @@
 # Technical Experiments
 
-This is log of Ankur's technical experiments in various interest areas. 
+- This is log of Ankur's technical experiments in various interest areas. 
+- It is hosted on Render and view the site here: https://techexperiment.onrender.com/
 
 > The trust method of learning is Experimentation. The
 

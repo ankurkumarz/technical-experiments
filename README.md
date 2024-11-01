@@ -5,6 +5,7 @@
 
 > The trust method of learning is Experimentation.
 
+
 ## Areas
 - Cloud Native Technologies
 - DevOps, GitOps

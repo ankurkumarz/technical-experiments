@@ -3,7 +3,7 @@
 - This is log of Ankur's technical experiments in various interest areas. 
 - It is hosted on Render and view the site here: https://techexperiment.onrender.com/
 
-> The trust method of learning is Experimentation. The
+> The trust method of learning is Experimentation.
 
 ## Areas
 - Cloud Native Technologies

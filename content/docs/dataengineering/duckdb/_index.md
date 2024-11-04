@@ -92,6 +92,7 @@ WHERE trim(region) = 'WESTERN EUROPE'" \
 
 ## PARQUET handling
 
+- Exporting data in Parquest format
 ```
 duckdb \
 -s "COPY (
@@ -101,6 +102,21 @@ WHERE trim(region) = 'WESTERN EUROPE'
 ) TO 'western_europe.parquet' (FORMAT PARQUET)"
 
 duckdb -s "FROM 'western_europe.parquet' LIMIT 5"
+```
+- Reading Parquet Data
+
+```
+select * from read_parquet('https://oedi-data-lake.s3.amazonaws.com/pvdaq/parquet/metrics/metrics__system_10__part000.parquet')
+
+FROM parquet_schema( 's3://us-prd-md-duckdb-in-action/nyc-taxis/yellow_tripdata_2022-06.parquet') SELECT name, type;
+
+-- 118M records
+CREATE OR REPLACE VIEW allRidesView AS
+FROM 's3://us-prd-md-duckdb-in-action/nyc-taxis/
+     yellow_tripdata_202*.parquet';
+
+.timer on
+SUMMARIZE allRidesView;
 ```
 
 ## ICEBERG handling
@@ -114,3 +130,12 @@ LOAD iceberg;
 SELECT count(*)
 FROM iceberg_scan('data/iceberg/lineitem_iceberg', allow_moved_paths = true);
 ```
+
+
+## Reference Datasets
+
+- [Tennis Dataset](https://github.com/JeffSackmann/tennis_atp)
+- [Photovoltaic Data Acquisition (PVDAQ) Public Datasets](https://catalog.data.gov/dataset/photovoltaic-data-acquisition-pvdaq-public-datasets)
+- [Stackoverflow Data](https://data.stackexchange.com/stackoverflow)
+- [Stack Exchange Data on Archive](https://archive.org/download/stackexchange)
+- [New York Taxi Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

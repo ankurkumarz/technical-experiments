@@ -26,6 +26,7 @@ yarn start
 - You can use integration with DuckDB to query Unity Catalog tables.
 - From Duck, you can query but can't write.
 - Other option is to use Unity catalog's utility CLI `uc` to load/query data into Unity Catalog tables:
+- Reference: [Unity Catalog CLI](https://docs.unitycatalog.io/usage/tables/deltalake/)
 
 ```
 bin/uc table create --full_name unity.default.test    --columns "some_numbers INT, some_letters STRING"     --storage_location ./sandbox/data/unitycatalog/etc/data/external/unity/default/tables/ 

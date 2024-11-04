@@ -131,7 +131,6 @@ SELECT count(*)
 FROM iceberg_scan('data/iceberg/lineitem_iceberg', allow_moved_paths = true);
 ```
 
-
 ## Reference Datasets
 
 - [Tennis Dataset](https://github.com/JeffSackmann/tennis_atp)
@@ -139,3 +138,7 @@ FROM iceberg_scan('data/iceberg/lineitem_iceberg', allow_moved_paths = true);
 - [Stackoverflow Data](https://data.stackexchange.com/stackoverflow)
 - [Stack Exchange Data on Archive](https://archive.org/download/stackexchange)
 - [New York Taxi Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+
+## Motherduck UI
+
+![Motherduck UI](./motherduck.png)

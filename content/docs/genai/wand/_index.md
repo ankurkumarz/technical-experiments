@@ -9,3 +9,10 @@ title: Weights & Biases
 - Recommended Course: [RAG in Prod](https://www.wandb.courses/courses/take/rag-in-production)
 - [Sample RAG Bot](https://github.com/wandb/wandbot)
 - [Course Code](https://github.com/wandb/edu/tree/main/rag-advanced/resources)
+
+
+## Local Setup
+
+```
+cd sandbox/genai/wand/edu/rag-advanced/notebooks
+```

@@ -12,3 +12,11 @@
 
 ## Local Setup
 
+- Using [Docker](https://docs.dremio.com/current/get-started/docker-quickstart/) for local setup.
+- [Kubernetes](https://docs.dremio.com/current/get-started/kubernetes-quickstart/) for local setup using Rancher.
+
+```
+cd sandbox/data/dremio
+git clone https://github.com/dremio/dremio-cloud-tools.git --depth=1
+
+```

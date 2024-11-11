@@ -37,6 +37,42 @@ type: docs
 - Open Source Software
 ```
 
+## Generative AI Experiments
+
+- [Runway](https://runwayml.com/) - Generating images/videos using AI
+- [Lamini AI](https://lamini.ai/) - Enterprise AI Platform with tuning, inference, etc.
+- [Groq](https://www.groq.com/) - AI Inference Platform
+- [Holistic AI](https://holistic.ai/) - Enterprise AI Governance
+- [Voyage AI](https://voyageai.com/) - Search and Retrieval for Unstructured Data
+- [Glean AI](https://www.glean.ai/) - Enterprise AI Platform with Search, Assistant, Apps, Prompt Lib, Workplace Search, etc.
+- [Comet](https://www.comet.com/) - End-to-end model evaluation platform for AI developers,
+- [Dataloop AI](https://dataloop.ai/) - Enterprise AI Platform with DataOps/LLMOps, Agents, etc.
+- [Baseten](https://www.baseten.co/) – Deploy AI models in production, AI Inference
+- [Neural Magic](https://neuralmagic.com/) - AI inference using vLLM (quantized)
+- [TigerGraph](https://www.tigergraph.com/) - Graph analytics and AI 
+- [Sambanova](https://sambanova.ai/) - AI Inference Platform
+- [Datastax](https://www.datastax.com/) - AI Platform, Astra DB, Langflow
+- [Deeplite](https://www.deeplite.ai/) - Optimized AI model for edge
+- [Iki.ai](https://iki.ai/) - Research assistant
+- [Write](https://writer.com/) - AI Writing Platform with AI Studio, KG, etc.
+- [Bloop AI](https://bloop.ai/) - Legacy code modernization
+- [Credo AI](https://www.credo.ai/) - AI Governance
+- [Vellum AI](https://www.vellum.ai/) - Prompting, Orchestration, Evaluations, etc.
+- [KServe](https://github.com/kserve/kserve) - Standardized Serverless ML Inference Platform on Kubernetes
+- [ClearML](https://clear.ml/) - LLMOps & MLOps Development Lifecycle
+- Products in [AI Top 50](https://insideainews.com/2024/10/22/the-insideai-news-impact-50-list-for-q4-2024/?)
+
+
+### LLM Observability
+
+- [Fiddler AI](https://www.fiddler.ai/)
+- [Arize AI](https://arize.com/)
+
+## Data Engineering Experiments
+
+- [LakeFS](https://lakefs.io/)
+
+
 ## Pending List to Experiment
 
 - [WunderGraph] (https://wundergraph.com/)

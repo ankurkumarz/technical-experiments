@@ -22,3 +22,10 @@ title: LangGraph
 
 - [Framework with Toolkit-like approach for Self-hosting](https://github.com/ankurkumarz/langgraph-agent-toolkit/blob/main/src/agents/llama_guard.py)
 - [LangGraph Tutorials](https://github.com/langchain-ai/langgraph/tree/main/docs/docs/tutorials)
+
+
+## Local Setup
+
+```
+cd sandbox/genai/langgraph/langchain-academy
+```

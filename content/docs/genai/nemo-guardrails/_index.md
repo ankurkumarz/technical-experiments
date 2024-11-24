@@ -4,6 +4,8 @@ title: NeMo Guardrails
 
 # NeMo-Guardrails
 
+- Nemo guardrails provides
+
 - [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) is an open-source toolkit, built by NVIDIA, for easily adding programmable guardrails to LLM-based conversational systems.
 - It is built using LangChain and supports integrated guardrails for LangChain applications.
 - It offers Chat, Server, and Library interface to experiment with Guardrails.

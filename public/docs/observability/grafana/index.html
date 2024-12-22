@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grafana # Grafana is an opensource observability tool to query and visualize the data using interactive dashboards, etc. Grafana is one of the most popular companion solution with Prometheus, which can be queried from Grafana. Grafana supports other time-series databases like Prometheus, InfluxDB, and Graphite, monitoring platforms such as Sensu, Icinga, Checkmk,Zabbix, Netdata, and PRTG; SIEMs such as Elasticsearch and Splunk; and other data sources. GitHub Repo: https://github.com/grafana/grafana Developer: Grafana Labs, Language: Go Cloud Offering # Grafana offers managed service as a cloud offering.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/observability/grafana/" />
+
+<title>Grafana | Technical Experiments by Ankur Kumar</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.84a547e6c6922b35f9e978aa9e201a238d61af2d29a88d7207c953ef0f60eff9.js" integrity="sha256-hKVH5saSKzX56XiqniAaI41hry0pqI1yB8lT7w9g7/k=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/observability/grafana/index.xml" title="Technical Experiments by Ankur Kumar" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_NT0hQeNW085ZHeuydRws7677Z8Ptj5LJk9YwJH84baL',{api_host:'https://app.posthog.com'})
+</script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Technical Experiments by Ankur Kumar</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Microservices</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/dapr/" class="">Dapr</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/linkerd/" class="">Linkerd</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Observability</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/grafana/" class=" active">Grafana</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/prometheus/" class="">Prometheus</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Programming</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/programming/rust-webassembly/" class="">Rust Webassembly</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Workflow</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/workflow/camunda/" class="">Camunda</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Engineering</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dbt/" class="">Dbt</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dremio/" class="">Dremio</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/duckdb/" class="">Duckdb</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/unitycatalog/" class="">Unitycatalog</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Science &amp; ML</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/datascience/metaflow/" class="">Metaflow</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>DevOps/GitOps</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/argocd/" class="">Argo CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/fluxcd/" class="">Flux CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/jenkins/" class="">Jenkins</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/sonarqube/" class="">Sonarqube</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/terraform/" class="">Terraform</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Gen AI</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/llmware/" class="">Llmware</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langgraph/" class="">LangGraph</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langsmith/" class="">LangSmith</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/nemo-guardrails/" class="">NeMo Guardrails</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/wand/" class="">Weights &amp; Biases</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/zenml/" class="">ZenML</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/" class="">Low-code Development Platform (LCDP)</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/outsystems/" class="">Outsystems</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Platforms</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/backstage/" class="">Backstage</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/hasura/" class="">Hasura</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/salesforce/" class="">Salesforce</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Serverless</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/momento/" class="">Momento</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/openfaas/" class="">OpenFaaS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Grafana</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#grafana">Grafana</a></li>
+    <li><a href="#cloud-offering">Cloud Offering</a></li>
+    <li><a href="#monitoring-kubernetes-local-cluster---grafana-on-cloud">Monitoring Kubernetes (Local Cluster - Grafana on Cloud)</a></li>
+    <li><a href="#k8s-default-dashboards">K8S Default Dashboards</a></li>
+    <li><a href="#key-findings">Key Findings</a>
+      <ul>
+        <li><a href="#managed-service-by-grafana-cloud-by-grafana-labs">Managed Service by Grafana Cloud by Grafana Labs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="grafana">
+  Grafana
+  <a class="anchor" href="#grafana">#</a>
+</h1>
+<ul>
+<li><a href="https://grafana.com/">Grafana</a> is an opensource observability tool to query and visualize the data using interactive dashboards, etc.</li>
+<li>Grafana is one of the most popular companion solution with Prometheus, which can be queried from Grafana.</li>
+<li>Grafana supports other time-series databases like Prometheus,  InfluxDB, and Graphite, monitoring platforms such as Sensu, Icinga, Checkmk,Zabbix, Netdata, and PRTG; SIEMs such as Elasticsearch and Splunk; and other data sources.</li>
+<li>GitHub Repo: <a href="https://github.com/grafana/grafana">https://github.com/grafana/grafana</a></li>
+<li>Developer: <strong>Grafana Labs</strong>, Language: Go</li>
+</ul>
+<h1 id="cloud-offering">
+  Cloud Offering
+  <a class="anchor" href="#cloud-offering">#</a>
+</h1>
+<ul>
+<li>Grafana offers managed service as a cloud offering. You can register for Free to use <strong>Grafana Cloud</strong> using GitHub or Google account credentials by <a href="https://grafana.com/auth/sign-in/?plcmt=top-nav&amp;cta=myaccount">clicking here</a>.</li>
+<li>Check out <a href="https://grafana.com/pricing/">Pricing</a> here. Their Free tier offers 3 users, 14 day retention, Synthetic, and Alerting with <strong>10k metrics + 50GB logs + 50GB traces</strong>.</li>
+<li>Pro has Grafana ML, SSO/SAML integration, Query caching, Reporting, Data source permissions, etc.</li>
+</ul>
+<h1 id="monitoring-kubernetes-local-cluster---grafana-on-cloud">
+  Monitoring Kubernetes (Local Cluster - Grafana on Cloud)
+  <a class="anchor" href="#monitoring-kubernetes-local-cluster---grafana-on-cloud">#</a>
+</h1>
+<ul>
+<li>My URL: <a href="https://ankurkumarz.grafana.net/">https://ankurkumarz.grafana.net/</a></li>
+<li>Refer to full <a href="https://ankurkumarz.grafana.net/a/grafana-easystart-app/kubernetes">documentation here</a>.</li>
+<li>Install the Agent in Kubernetes default cluster</li>
+</ul>
+<pre tabindex="0"><code>MANIFEST_URL=https://raw.githubusercontent.com/grafana/agent/main/production/kubernetes/agent-bare.yaml NAMESPACE=default /bin/sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/grafana/agent/release/production/kubernetes/install-bare.sh)&#34; | kubectl apply -f -
+</code></pre><ul>
+<li>Run the following commands to install kube-state-metrics:</li>
+</ul>
+<pre tabindex="0"><code>helm repo add prometheus-community https://prometheus-community.github.io/helm-charts &amp;&amp; helm repo update &amp;&amp; helm install ksm prometheus-community/kube-state-metrics --set image.tag=v2.2.0
+</code></pre><ul>
+<li>Configure and restart the agent (instructions in above doc link)</li>
+</ul>
+<h1 id="k8s-default-dashboards">
+  K8S Default Dashboards
+  <a class="anchor" href="#k8s-default-dashboards">#</a>
+</h1>
+<p><img src="grafana-dashboard.png" alt="Kubernetes" /></p>
+<h1 id="key-findings">
+  Key Findings
+  <a class="anchor" href="#key-findings">#</a>
+</h1>
+<ul>
+<li>
+<p>Grafana is a de facto standard for visualization with real-time timeseries database like Prometheus</p>
+</li>
+<li>
+<p>Key competition: Elastic&rsquo;s Kibana, Cloud-providers native experience (e.g. AWS CloudWatch, Azure Monitor) or Observability/APM solutions like Dynatrace, New Relic, Splunk, etc.</p>
+</li>
+<li>
+<p>Grafana can be integrate with all the above tools to visualize data in a single place.</p>
+</li>
+<li>
+<p>Grafana key integrators:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/visualize/grafana-plugin">Monitor Azure Services using Grafana</a></li>
+<li></li>
+</ul>
+</li>
+<li>
+<p>Fully-managed Grafana services are being offered by:</p>
+<ul>
+<li><a href="https://aws.amazon.com/grafana/">AWS Fully Managed Service</a></li>
+<li>Grafana Labs signed partnership with Microsoft Azure to deliver first-party Grafana Service. <a href="https://grafana.com/about/press/2021/11/10/grafana-labs-and-microsoft-partner-to-deliver-new-first-party-microsoft-azure-service/">Click here</a> to read more.</li>
+</ul>
+</li>
+<li>
+<p>End-to-end Observability (Grafana Labs offers a managed service)</p>
+<ul>
+<li>Visualization with Grafana</li>
+<li>Metrics with Prometheus and Graphite</li>
+<li>Logs with Loki</li>
+<li>Traces with Tempo</li>
+</ul>
+</li>
+</ul>
+<h2 id="managed-service-by-grafana-cloud-by-grafana-labs">
+  Managed Service by Grafana Cloud by Grafana Labs
+  <a class="anchor" href="#managed-service-by-grafana-cloud-by-grafana-labs">#</a>
+</h2>
+<p><img src="images/grafana-cloud.png" alt="Grafana Cloud" /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#grafana">Grafana</a></li>
+    <li><a href="#cloud-offering">Cloud Offering</a></li>
+    <li><a href="#monitoring-kubernetes-local-cluster---grafana-on-cloud">Monitoring Kubernetes (Local Cluster - Grafana on Cloud)</a></li>
+    <li><a href="#k8s-default-dashboards">K8S Default Dashboards</a></li>
+    <li><a href="#key-findings">Key Findings</a>
+      <ul>
+        <li><a href="#managed-service-by-grafana-cloud-by-grafana-labs">Managed Service by Grafana Cloud by Grafana Labs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

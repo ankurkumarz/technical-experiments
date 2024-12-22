@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Camunda # Camunda describes itself as a universal process orchestrator. The most recent version is Camunda Platform 8. A workflow management solution based on BPMN and DMN based modeling framework. It supports both self-managed PaaS-based deployment and SaaS-based deployment model. Underlying architecture is using Microservices &amp; Cloud-native oriented architecture replacing traditional Traditional business process management suites (BPM) systems. Camunda has Opensource Modeler (as a desktop app &amp; web), Opensource community edition.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/workflow/camunda/" />
+
+<title>Camunda | Technical Experiments by Ankur Kumar</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.84a547e6c6922b35f9e978aa9e201a238d61af2d29a88d7207c953ef0f60eff9.js" integrity="sha256-hKVH5saSKzX56XiqniAaI41hry0pqI1yB8lT7w9g7/k=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/workflow/camunda/index.xml" title="Technical Experiments by Ankur Kumar" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_NT0hQeNW085ZHeuydRws7677Z8Ptj5LJk9YwJH84baL',{api_host:'https://app.posthog.com'})
+</script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Technical Experiments by Ankur Kumar</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Microservices</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/dapr/" class="">Dapr</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/linkerd/" class="">Linkerd</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Observability</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/grafana/" class="">Grafana</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/prometheus/" class="">Prometheus</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Programming</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/programming/rust-webassembly/" class="">Rust Webassembly</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Workflow</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/workflow/camunda/" class=" active">Camunda</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Engineering</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dbt/" class="">Dbt</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dremio/" class="">Dremio</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/duckdb/" class="">Duckdb</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/unitycatalog/" class="">Unitycatalog</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Science &amp; ML</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/datascience/metaflow/" class="">Metaflow</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>DevOps/GitOps</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/argocd/" class="">Argo CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/fluxcd/" class="">Flux CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/jenkins/" class="">Jenkins</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/sonarqube/" class="">Sonarqube</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/terraform/" class="">Terraform</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Gen AI</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/llmware/" class="">Llmware</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langgraph/" class="">LangGraph</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langsmith/" class="">LangSmith</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/nemo-guardrails/" class="">NeMo Guardrails</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/wand/" class="">Weights &amp; Biases</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/zenml/" class="">ZenML</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/" class="">Low-code Development Platform (LCDP)</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/outsystems/" class="">Outsystems</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Platforms</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/backstage/" class="">Backstage</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/hasura/" class="">Hasura</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/salesforce/" class="">Salesforce</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Serverless</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/momento/" class="">Momento</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/openfaas/" class="">OpenFaaS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Camunda</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#camunda">Camunda</a>
+      <ul>
+        <li><a href="#applicability">Applicability</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#accesssetup">Access/Setup</a></li>
+        <li><a href="#sample-applications">Sample Applications</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#useful-links">Useful Links:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="camunda">
+  Camunda
+  <a class="anchor" href="#camunda">#</a>
+</h1>
+<ul>
+<li><a href="https://camunda.com/">Camunda</a> describes itself as a universal process orchestrator. The most recent version is Camunda Platform 8.</li>
+<li>A workflow management solution  based on <a href="https://www.omg.org/bpmn/">BPMN</a> and <a href="https://www.omg.org/dmn/">DMN</a> based modeling framework.</li>
+<li>It supports both self-managed PaaS-based deployment and SaaS-based deployment model.</li>
+<li>Underlying architecture is using Microservices &amp; Cloud-native oriented architecture replacing traditional Traditional business process management suites (BPM) systems.</li>
+<li>Camunda has Opensource Modeler (as a desktop app &amp; web), Opensource community edition. See comparison with enterprise edition by <a href="https://camunda.com/enterprise/">clicking here</a>.</li>
+<li>Key offerings of Camunda Platform 8 are <a href="https://docs.camunda.io/docs/components/concepts/what-is-camunda-platform-8/">documented here</a>
+<ul>
+<li>Horizontal scalability, high availability, and fault tolerance (with SaaS Model &amp; On-premises/Hybrid Cloud as a separate option)</li>
+<li>Audit trail of workflows (events-driven)</li>
+<li>Reactive publish-subscribe interaction model, Visual processes modeled in ISO-standard BPMN 2.0, and Language-agnostic client model.</li>
+</ul>
+</li>
+</ul>
+<h2 id="applicability">
+  Applicability
+  <a class="anchor" href="#applicability">#</a>
+</h2>
+<ul>
+<li>Business-process automation examples such as:
+<ul>
+<li>Financial Services: Automated KYC process for client onboarding (Bank), client engagement process automation</li>
+</ul>
+</li>
+<li>Any human-task orchestration</li>
+<li>Orchestrating Microservices</li>
+<li>RPA Bots Orchestration</li>
+<li>Build a Centralized Process Automation Platform. <a href="https://camunda.com/solutions/process-automation-platform/">Read here</a>.</li>
+</ul>
+<h2 id="architecture">
+  Architecture
+  <a class="anchor" href="#architecture">#</a>
+</h2>
+<ul>
+<li>Overall Technology Stack: Java, Spring Boot, Kafka, gRPC (Zeebee components communication), GraphQL (used by Tasklist), ELK (logs for Zeebee and others)</li>
+<li><a href="https://docs.camunda.org/manual/7.17/">Camunda 7</a> was Java EE &amp; Spring Boot based and Camunda 8 has been reengineered towards cloud-native and microservices.</li>
+<li>GitHub Repository: <a href="https://github.com/camunda">https://github.com/camunda</a></li>
+<li><a href="https://camunda.com/platform/">Platform Components</a>: Zeebe, Modeler, Operate, Tasklist &amp; Optimize.</li>
+<li><a href="https://docs.camunda.io/docs/components/modeler/about-modeler/">Modeler</a>: Modeling following BPMN/DNM standards visually (web &amp; desktop app)</li>
+<li><a href="https://docs.camunda.io/docs/components/zeebe/zeebe-overview/">Zeebee</a> as a cloud-native BPMN Workflow Engine.</li>
+<li>Decision Engine: using DNM as standard.</li>
+<li><a href="https://docs.camunda.io/docs/components/tasklist/introduction/">Tasklist</a>: for managing human tasks. Tasklist is a ready-to-use application to rapidly implement business processes alongside user tasks in Zeebe.</li>
+<li><a href="https://docs.camunda.io/docs/components/operate/">Operate</a>: for monitoring real-time, analyze/resolve issues. Operate is a tool for monitoring and troubleshooting process instances running in Zeebe.</li>
+<li><a href="https://docs.camunda.io/docs/components/optimize/what-is-optimize/">Optimize</a>: for insights into the workflow with visual reports, heatmap, etc.</li>
+</ul>
+<p><img src="camunda-components.png" alt="Camunda Components" />
+Image Source: <a href="https://camunda.com/platform-7/">https://camunda.com/platform-7/</a></p>
+<ul>
+<li>
+<p>Zeebee Architecture:
+<img src="https://docs.camunda.io/assets/images/zeebe-architecture-67c608106ddc1c9eaa686a5a268887f9.png" alt="Zeebee" /></p>
+</li>
+<li>
+<p>Read about Camunda platform reference architecture by <a href="https://camunda.com/wp-content/uploads/2020/09/TB-Camunda_Reference_Architecture-092520.pdf">clicking here</a>:</p>
+</li>
+<li>
+<p>Camunda Process Engine is built using Spring Boot. It supports embedded deployment (as a library) or container-managed as an independent container, or standalone process engine server deployed in VM. Docker image is available at <a href="https://registry.camunda.cloud/">their registry</a> built using Harbor.</p>
+</li>
+<li>
+<p>Camunda recommends Oracle or PostgreSQL for production and H2 for
+development. It supports MySQL, MariaDB, IBM DB2, Amazon Aurora, Azure SQL, SQL Server, and CockroachDB as well</p>
+</li>
+</ul>
+<h2 id="accesssetup">
+  Access/Setup
+  <a class="anchor" href="#accesssetup">#</a>
+</h2>
+<ul>
+<li>
+<p>Trial: SaaS is available as a free account with collaborative modeling features for unlimited BPMN/DMN models.</p>
+</li>
+<li>
+<p>Register to access <a href="https://console.cloud.camunda.io/">Camunda Console</a> for 1 month trial period</p>
+</li>
+<li>
+<p>Camunda Console is available as a free account (trial):
+<img src="camunda-console.png" alt="Camunda Console for Cluster" /></p>
+</li>
+<li>
+<p>Installed Camunda Modeler (available as Opensource)</p>
+</li>
+</ul>
+<h2 id="sample-applications">
+  Sample Applications
+  <a class="anchor" href="#sample-applications">#</a>
+</h2>
+<ul>
+<li>Create a Microservices orchestration flow using the modeler like below:
+<img src="camunda-modeler.png" alt="Camunda Modeler" /></li>
+<li>You can also use their CLI interface:</li>
+</ul>
+<pre tabindex="0"><code>zbctl create instance &#34;order-process&#34;
+</code></pre><ul>
+<li>Created a simple process to call a REST endpoint:
+<img src="camunda-sample-process.png" alt="Sample App" /></li>
+<li>More code examples are available here: <a href="https://github.com/camunda/camunda-bpm-examples">https://github.com/camunda/camunda-bpm-examples</a></li>
+<li>Connect your local desktop setup with cloud as shown below for deployment:
+<img src="camunda-desktop.png" alt="Deployment" /></li>
+</ul>
+<h2 id="screenshots">
+  Screenshots
+  <a class="anchor" href="#screenshots">#</a>
+</h2>
+<ul>
+<li>Optmize dashboard listing all created dashboards (ready-made available)
+<img src="camunda--optimize-dashboard.png" alt="Dashboards" /></li>
+<li>Optimize Heatmap displays the incidence of higher outliers based on duration. Calculated by z-score.
+<img src="camunda-optimize-heatmap.png" alt="Optimize Dashboard" />
+<img src="camunda-optimize-dashboard-2.png" alt="Optimize Dashboard" /></li>
+</ul>
+<h2 id="useful-links">
+  Useful Links:
+  <a class="anchor" href="#useful-links">#</a>
+</h2>
+<ul>
+<li>Downloads: <a href="https://camunda.com/download/modeler/">https://camunda.com/download/modeler/</a></li>
+<li><a href="https://camunda.com/blog/2021/10/start-and-step-through-a-process-with-rest-feat-swaggerui/">https://camunda.com/blog/2021/10/start-and-step-through-a-process-with-rest-feat-swaggerui/</a></li>
+<li><a href="https://github.com/camunda">https://github.com/camunda</a></li>
+<li><a href="https://docs.camunda.io/">https://docs.camunda.io/</a></li>
+<li><a href="https://docs.camunda.io/docs/guides/orchestrate-microservices/">https://docs.camunda.io/docs/guides/orchestrate-microservices/</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#camunda">Camunda</a>
+      <ul>
+        <li><a href="#applicability">Applicability</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#accesssetup">Access/Setup</a></li>
+        <li><a href="#sample-applications">Sample Applications</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#useful-links">Useful Links:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

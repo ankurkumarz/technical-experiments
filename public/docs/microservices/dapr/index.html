@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DAPR # Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks. The Distributed Application Runtime (Dapr) provides APIs that simplify microservice connectivity. Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration, encryption, observability, and secret management Architecture # Sample Reference Application # Source">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/microservices/dapr/" />
+
+<title>Dapr | Technical Experiments by Ankur Kumar</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.84a547e6c6922b35f9e978aa9e201a238d61af2d29a88d7207c953ef0f60eff9.js" integrity="sha256-hKVH5saSKzX56XiqniAaI41hry0pqI1yB8lT7w9g7/k=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/microservices/dapr/index.xml" title="Technical Experiments by Ankur Kumar" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_NT0hQeNW085ZHeuydRws7677Z8Ptj5LJk9YwJH84baL',{api_host:'https://app.posthog.com'})
+</script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Technical Experiments by Ankur Kumar</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Microservices</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/dapr/" class=" active">Dapr</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/linkerd/" class="">Linkerd</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Observability</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/grafana/" class="">Grafana</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/prometheus/" class="">Prometheus</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Programming</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/programming/rust-webassembly/" class="">Rust Webassembly</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Workflow</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/workflow/camunda/" class="">Camunda</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Engineering</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dbt/" class="">Dbt</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dremio/" class="">Dremio</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/duckdb/" class="">Duckdb</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/unitycatalog/" class="">Unitycatalog</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Science &amp; ML</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/datascience/metaflow/" class="">Metaflow</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>DevOps/GitOps</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/argocd/" class="">Argo CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/fluxcd/" class="">Flux CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/jenkins/" class="">Jenkins</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/sonarqube/" class="">Sonarqube</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/terraform/" class="">Terraform</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Gen AI</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/llmware/" class="">Llmware</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langgraph/" class="">LangGraph</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langsmith/" class="">LangSmith</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/nemo-guardrails/" class="">NeMo Guardrails</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/wand/" class="">Weights &amp; Biases</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/zenml/" class="">ZenML</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/" class="">Low-code Development Platform (LCDP)</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/outsystems/" class="">Outsystems</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Platforms</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/backstage/" class="">Backstage</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/hasura/" class="">Hasura</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/salesforce/" class="">Salesforce</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Serverless</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/momento/" class="">Momento</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/openfaas/" class="">OpenFaaS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Dapr</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#dapr">DAPR</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#sample-reference-application">Sample Reference Application</a></li>
+    <li><a href="#local-installation-using-kubernetes">Local Installation (using Kubernetes)</a>
+      <ul>
+        <li><a href="#dapr-state-store--pubsub">DAPR State Store &amp; Pub/Sub</a></li>
+        <li><a href="#dapr-with-docker-no-k8s">DAPR with Docker (No K8S)</a></li>
+        <li><a href="#dapr-ui-dashboards">DAPR UI Dashboards</a></li>
+      </ul>
+    </li>
+    <li><a href="#key-takeaways">Key Takeaways</a></li>
+    <li><a href="#dapr-vs-service-mesh">DAPR vs. Service Mesh</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="dapr">
+  DAPR
+  <a class="anchor" href="#dapr">#</a>
+</h1>
+<ul>
+<li>Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks.</li>
+<li>The Distributed Application Runtime (Dapr) provides APIs that simplify microservice connectivity.</li>
+<li>Dapr’s sidecar take care of the complex challenges such as service discovery, message broker integration, encryption, observability, and secret management</li>
+</ul>
+<h1 id="architecture">
+  Architecture
+  <a class="anchor" href="#architecture">#</a>
+</h1>
+<p><img src="https://dapr.io/images/service-invocation.png" alt="Architecture" /></p>
+<h1 id="sample-reference-application">
+  Sample Reference Application
+  <a class="anchor" href="#sample-reference-application">#</a>
+</h1>
+<p><img src="architecture_diagram.png" alt="Reference Application" />
+<a href="https://github.com/dapr/quickstarts/tree/v1.6.0/hello-kubernetes">Source</a></p>
+<h1 id="local-installation-using-kubernetes">
+  Local Installation (using Kubernetes)
+  <a class="anchor" href="#local-installation-using-kubernetes">#</a>
+</h1>
+<ul>
+<li>Step 1: Install DAPR CLI library. <a href="https://docs.dapr.io/getting-started/install-dapr-cli/">Click here</a> to read more.</li>
+</ul>
+<pre tabindex="0"><code>brew install dapr/tap/dapr-cli
+</code></pre><ul>
+<li>Setup DAPR on K8S Cluster (creates a namespace). <a href="https://docs.dapr.io/operations/hosting/kubernetes/kubernetes-deploy/">Click here</a> for detailed instructions for different K8S setup (AKS, EKS, GKE).</li>
+</ul>
+<pre tabindex="0"><code>dapr init --kubernetes --wait
+</code></pre><ul>
+<li>Verify Installation</li>
+</ul>
+<pre tabindex="0"><code>dapr status -k
+kubectl get pods --namespace dapr-system
+</code></pre><h2 id="dapr-state-store--pubsub">
+  DAPR State Store &amp; Pub/Sub
+  <a class="anchor" href="#dapr-state-store--pubsub">#</a>
+</h2>
+<ul>
+<li>DAPR needs a state store (you can use Redis, CosmosDB, DynamoDB, Cassandra, etc.)</li>
+<li>Create and configure a state store with REDIS</li>
+</ul>
+<pre tabindex="0"><code>helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+helm install redis bitnami/redis
+</code></pre><ul>
+<li>Create 2 files to install REDIS:redis-state.yaml, redis-pubsub.yaml (as per details <a href="https://docs.dapr.io/getting-started/tutorials/configure-state-pubsub/#step-1-create-a-redis-store">here</a>)</li>
+<li>Install in K8S
+<strong>quickstarts/tutorials/hello-kubernetes/deploy</strong></li>
+</ul>
+<pre tabindex="0"><code>kubectl apply -f redis-state.yaml
+kubectl apply -f redis-pubsub.yaml
+</code></pre><h2 id="dapr-with-docker-no-k8s">
+  DAPR with Docker (No K8S)
+  <a class="anchor" href="#dapr-with-docker-no-k8s">#</a>
+</h2>
+<ul>
+<li>Run DAPR with docker</li>
+</ul>
+<pre tabindex="0"><code>dapr init
+dapr run --app-id myapp --dapr-http-port 3500
+</code></pre><p>These tell Dapr to use the local Docker container for Redis as a state store and message broker (~/.dapr/components)</p>
+<ul>
+<li>Remove Dapr containers</li>
+</ul>
+<pre tabindex="0"><code>dapr uninstall
+</code></pre><h2 id="dapr-ui-dashboards">
+  DAPR UI Dashboards
+  <a class="anchor" href="#dapr-ui-dashboards">#</a>
+</h2>
+<ul>
+<li>Run to access DAPR UI Dashboard (-k for Kubernetes)</li>
+</ul>
+<pre tabindex="0"><code>dapr dashboard -k -n &lt;your-namespace&gt;.
+</code></pre><p><img src="dapr-ui-dashboard.png" alt="DAPR UI Dashboards" />
+<img src="dapr-components.png" alt="DAPR State Management" /></p>
+<h1 id="key-takeaways">
+  Key Takeaways
+  <a class="anchor" href="#key-takeaways">#</a>
+</h1>
+<ul>
+<li>DAPR usage is more to provide developer decoupled runtime to address service-to-service communication, state management for stateful services, PUB/SUB for event-driven services, observability at fine-grained level, and related needs.</li>
+<li>For example, you can also directly use REDIS in your application code for state management but DAPR runtime provides abstraction so that you don&rsquo;t have to worry about integration with state store. You will simply interface with DAPR and if there is need to change from REDIS to cloud-provider managed state such as DynamoDB, AWS DynamoDB, it can happen without any code change.</li>
+<li>More suitable for large-scale distributed applications using Microservices architecture</li>
+</ul>
+<h1 id="dapr-vs-service-mesh">
+  DAPR vs. Service Mesh
+  <a class="anchor" href="#dapr-vs-service-mesh">#</a>
+</h1>
+<ul>
+<li>DAPR is more developer centric and Service mesh is more infrastructure centric</li>
+<li>If you need encrypted communication between services, need to use Service Mesh</li>
+<li><a href="https://docs.dapr.io/concepts/service-mesh/">Click here</a> to read the official documentation
+<img src="https://docs.dapr.io/images/service-mesh.png" alt="Architecture" /></li>
+</ul>
+<h1 id="references">
+  References
+  <a class="anchor" href="#references">#</a>
+</h1>
+<ul>
+<li><a href="https://www.baeldung.com/dapr-spring-cloud-gateway">Baeldung example with Spring Cloud Gateway (without Kubernetes</a></li>
+<li><a href="https://github.com/dapr/quickstarts/tree/master/tutorials/hello-kubernetes">DAPR Tutorials</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#dapr">DAPR</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#sample-reference-application">Sample Reference Application</a></li>
+    <li><a href="#local-installation-using-kubernetes">Local Installation (using Kubernetes)</a>
+      <ul>
+        <li><a href="#dapr-state-store--pubsub">DAPR State Store &amp; Pub/Sub</a></li>
+        <li><a href="#dapr-with-docker-no-k8s">DAPR with Docker (No K8S)</a></li>
+        <li><a href="#dapr-ui-dashboards">DAPR UI Dashboards</a></li>
+      </ul>
+    </li>
+    <li><a href="#key-takeaways">Key Takeaways</a></li>
+    <li><a href="#dapr-vs-service-mesh">DAPR vs. Service Mesh</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

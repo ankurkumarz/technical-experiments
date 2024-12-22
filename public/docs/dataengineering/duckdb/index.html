@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DuckDB # DuckDB is an open-source, in-process OLAP database used by data professionals to analyze data quickly and efficiently. Released in 2019, DuckDB is emerging as in-memory/in-process SQL-based processing engine for OLAP workload. It is Opensource and available with MIT license. DuckDB is used at Facebook, Google, and Airbnb. Enterprise support: DuckDB Labs available as a consulting firm along with MotherDuck (which has received $100m funding for its data platform based on DuckDB, with investors including Andreessen Horowitz) Supports vector database capabilities with HNSW search Processing supported: CSV, JSON, Parquet, and Apache Arrow, as well as several databases, like MySQL, SQLite, and Postgres.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/docs/dataengineering/duckdb/" />
+
+<title>Duckdb | Technical Experiments by Ankur Kumar</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.84a547e6c6922b35f9e978aa9e201a238d61af2d29a88d7207c953ef0f60eff9.js" integrity="sha256-hKVH5saSKzX56XiqniAaI41hry0pqI1yB8lT7w9g7/k=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/docs/dataengineering/duckdb/index.xml" title="Technical Experiments by Ankur Kumar" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_NT0hQeNW085ZHeuydRws7677Z8Ptj5LJk9YwJH84baL',{api_host:'https://app.posthog.com'})
+</script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Technical Experiments by Ankur Kumar</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Microservices</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/dapr/" class="">Dapr</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/linkerd/" class="">Linkerd</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Observability</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/grafana/" class="">Grafana</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/prometheus/" class="">Prometheus</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Programming</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/programming/rust-webassembly/" class="">Rust Webassembly</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Workflow</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/workflow/camunda/" class="">Camunda</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Engineering</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dbt/" class="">Dbt</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dremio/" class="">Dremio</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/duckdb/" class=" active">Duckdb</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/unitycatalog/" class="">Unitycatalog</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Science &amp; ML</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/datascience/metaflow/" class="">Metaflow</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>DevOps/GitOps</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/argocd/" class="">Argo CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/fluxcd/" class="">Flux CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/jenkins/" class="">Jenkins</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/sonarqube/" class="">Sonarqube</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/terraform/" class="">Terraform</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Gen AI</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/llmware/" class="">Llmware</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langgraph/" class="">LangGraph</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langsmith/" class="">LangSmith</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/nemo-guardrails/" class="">NeMo Guardrails</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/wand/" class="">Weights &amp; Biases</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/zenml/" class="">ZenML</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/" class="">Low-code Development Platform (LCDP)</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/outsystems/" class="">Outsystems</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Platforms</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/backstage/" class="">Backstage</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/hasura/" class="">Hasura</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/salesforce/" class="">Salesforce</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Serverless</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/momento/" class="">Momento</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/openfaas/" class="">OpenFaaS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Duckdb</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#duckdb">DuckDB</a>
+      <ul>
+        <li><a href="#use-cases---where-to-use">Use-cases - where to use?</a></li>
+        <li><a href="#where-not-to-use">Where not to use?</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#sample-projects">Sample Projects</a></li>
+        <li><a href="#cloud">Cloud</a></li>
+        <li><a href="#integration-1">Integration</a></li>
+        <li><a href="#local-setup">Local Setup</a></li>
+        <li><a href="#common-commands">Common Commands</a></li>
+        <li><a href="#parquet-handling">PARQUET handling</a></li>
+        <li><a href="#iceberg-handling">ICEBERG handling</a></li>
+        <li><a href="#reference-datasets">Reference Datasets</a></li>
+        <li><a href="#motherduck-ui">Motherduck UI</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="duckdb">
+  DuckDB
+  <a class="anchor" href="#duckdb">#</a>
+</h1>
+<ul>
+<li><a href="https://duckdb.org/">DuckDB</a> is an open-source, in-process OLAP database used by data professionals to analyze data quickly and efficiently.</li>
+<li>Released in 2019, <a href="https://duckdb.org/">DuckDB</a> is emerging as in-memory/in-process SQL-based processing engine for OLAP workload. It is Opensource and available with MIT license.</li>
+<li>DuckDB is used at Facebook, Google, and Airbnb.</li>
+<li>Enterprise support: DuckDB Labs available as a consulting firm along with <a href="https://motherduck.com/">MotherDuck</a> (which has received $100m funding for its data platform based on DuckDB, with investors including Andreessen Horowitz)</li>
+<li>Supports vector database capabilities with HNSW search</li>
+<li>Processing supported: CSV, JSON, Parquet, and Apache Arrow, as well
+as several databases, like MySQL, SQLite, and Postgres.</li>
+<li><a href="https://web-assets-prod.motherduck.com/assets/books/DuckDB_In_Action_Final_MotherDuck.pdf">DuckDB in Action Book</a></li>
+</ul>
+<blockquote>
+<p>DuckDB is a modern embedded analytics database that runs on your machine and lets
+you efficiently process and query gigabytes of data from different sources.</p>
+</blockquote>
+<h2 id="use-cases---where-to-use">
+  Use-cases - where to use?
+  <a class="anchor" href="#use-cases---where-to-use">#</a>
+</h2>
+<ul>
+<li>Access huge volume of data (up to GBs) locally and process quickly. It is easier to set up than a Spark cluster, has lower resource requirements than pandas, easier to set up and use than PostgreSQL, Redshift, and other RDBMS, faster than SQLite, Talend for analytical workloads, and more.</li>
+<li>Data doesn’t leave your system (local or privacy-compliant hosting)</li>
+<li><a href="https://motherduck.com/blog/search-using-duckdb-part-2/">RAG Solution with DuckDB</a></li>
+<li><a href="https://motherduck.com/blog/streamlining-ai-agents-duckdb-rag-solutions/">Building AI Agents with DuckDB, DLT, Cognee</a></li>
+<li>MotherDuck extends the functionality for building AI apps using <a href="https://motherduck.com/blog/sql-embeddings-for-semantic-meaning-in-text-and-rag/">EMBED</a> and <a href="https://motherduck.com/blog/sql-llm-prompt-function-gpt-models/">PROMPT</a> functions.</li>
+<li>Sample use-cases such as analyzing log files where they are stored, without needing to copy them to new locations, preprocessing and pre-cleaning of user-generated data for machine learning, etc.
+training</li>
+<li>Cloud vendors offer expensive analytics services,like BigQuery, Amazon Redshift, and AWS Athena, which charge by processed data volume. Replace many of those uses with scheduled cloud functions processing the data with DuckDB. You can also chain those processing functions by writing out intermediate results to cloud storage, which can then
+also be used for auditing.</li>
+</ul>
+<h2 id="where-not-to-use">
+  Where not to use?
+  <a class="anchor" href="#where-not-to-use">#</a>
+</h2>
+<ul>
+<li>Not suitable for streaming data as data needs to be available</li>
+<li>Data volumes exceed a few hundred gigabytes. The data volumes you can process with DuckDB are mostly limited by the main memory of the system.</li>
+<li>Minimal support for transactions and parallel write access</li>
+</ul>
+<h2 id="integration">
+  Integration
+  <a class="anchor" href="#integration">#</a>
+</h2>
+<ul>
+<li><a href="https://duckdb.org/docs/extensions/overview.html">Many extensions</a> available for extending the functionality</li>
+</ul>
+<h2 id="sample-projects">
+  Sample Projects
+  <a class="anchor" href="#sample-projects">#</a>
+</h2>
+<ul>
+<li><a href="https://github.com/pracdata/duckdb-pipeline">DuckDB as high-performance data pipeline</a></li>
+<li><a href="https://github.com/duckdb-in-action/examples">DuckDB in Action Book Code</a></li>
+</ul>
+<h2 id="cloud">
+  Cloud
+  <a class="anchor" href="#cloud">#</a>
+</h2>
+<ul>
+<li>MotherDuck provides hosted version of DuckDB (registered using GitHub): <a href="https://app.motherduck.com/">app.motherduck.com</a></li>
+<li></li>
+</ul>
+<h2 id="integration-1">
+  Integration
+  <a class="anchor" href="#integration-1">#</a>
+</h2>
+<ul>
+<li></li>
+</ul>
+<h2 id="local-setup">
+  Local Setup
+  <a class="anchor" href="#local-setup">#</a>
+</h2>
+<pre tabindex="0"><code>brew install duckdb
+duckdb
+.exit -- DOT commands
+vi $HOME/.duckdbrc
+
+-- Duck head prompt
+.prompt &#39;O&gt; &#39;
+-- Example SQL statement
+select &#39;Ankur | Begin quacking now &#39;||cast(now() as string) as &#34;Ready, Set, ...&#34;;
+</code></pre><h2 id="common-commands">
+  Common Commands
+  <a class="anchor" href="#common-commands">#</a>
+</h2>
+<pre tabindex="0"><code>DESCRIBE
+SELECT *
+FROM duckdb_extensions();
+
+INSTALL httpfs;
+LOAD httpfs;
+
+SELECT count(*)
+FROM &#39;https://github.com/bnokoro/Data-Science/raw/master/&#39;
+&#39;countries%20of%20the%20world.csv&#39;;
+
+.mode line
+SELECT *
+FROM read_csv_auto(&#34;https://bit.ly/3KoiZR0&#34;)
+LIMIT 1;
+
+duckdb -csv \
+-s &#34;SELECT Country, Population, Birthrate, Deathrate
+FROM read_csv_auto(&#39;https://bit.ly/3KoiZR0&#39;)
+WHERE trim(region) = &#39;WESTERN EUROPE&#39;&#34; \
+&gt; western_europe.csv
+</code></pre><h2 id="parquet-handling">
+  PARQUET handling
+  <a class="anchor" href="#parquet-handling">#</a>
+</h2>
+<ul>
+<li>Exporting data in Parquest format</li>
+</ul>
+<pre tabindex="0"><code>duckdb \
+-s &#34;COPY (
+SELECT Country, Population, Birthrate, Deathrate
+FROM read_csv_auto(&#39;https://bit.ly/3KoiZR0&#39;)
+WHERE trim(region) = &#39;WESTERN EUROPE&#39;
+) TO &#39;western_europe.parquet&#39; (FORMAT PARQUET)&#34;
+
+duckdb -s &#34;FROM &#39;western_europe.parquet&#39; LIMIT 5&#34;
+</code></pre><ul>
+<li>Reading Parquet Data</li>
+</ul>
+<pre tabindex="0"><code>select * from read_parquet(&#39;https://oedi-data-lake.s3.amazonaws.com/pvdaq/parquet/metrics/metrics__system_10__part000.parquet&#39;)
+
+FROM parquet_schema( &#39;s3://us-prd-md-duckdb-in-action/nyc-taxis/yellow_tripdata_2022-06.parquet&#39;) SELECT name, type;
+
+-- 118M records
+CREATE OR REPLACE VIEW allRidesView AS
+FROM &#39;s3://us-prd-md-duckdb-in-action/nyc-taxis/
+     yellow_tripdata_202*.parquet&#39;;
+
+.timer on
+SUMMARIZE allRidesView;
+</code></pre><h2 id="iceberg-handling">
+  ICEBERG handling
+  <a class="anchor" href="#iceberg-handling">#</a>
+</h2>
+<ul>
+<li><a href="https://duckdb.org/docs/extensions/iceberg.html">Reference</a></li>
+</ul>
+<pre tabindex="0"><code>INSTALL iceberg;
+LOAD iceberg;
+
+SELECT count(*)
+FROM iceberg_scan(&#39;data/iceberg/lineitem_iceberg&#39;, allow_moved_paths = true);
+</code></pre><h2 id="reference-datasets">
+  Reference Datasets
+  <a class="anchor" href="#reference-datasets">#</a>
+</h2>
+<ul>
+<li><a href="https://github.com/JeffSackmann/tennis_atp">Tennis Dataset</a></li>
+<li><a href="https://catalog.data.gov/dataset/photovoltaic-data-acquisition-pvdaq-public-datasets">Photovoltaic Data Acquisition (PVDAQ) Public Datasets</a></li>
+<li><a href="https://data.stackexchange.com/stackoverflow">Stackoverflow Data</a></li>
+<li><a href="https://archive.org/download/stackexchange">Stack Exchange Data on Archive</a></li>
+<li><a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page">New York Taxi Data</a></li>
+</ul>
+<h2 id="motherduck-ui">
+  Motherduck UI
+  <a class="anchor" href="#motherduck-ui">#</a>
+</h2>
+<p><img src="./motherduck.png" alt="Motherduck UI" /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#duckdb">DuckDB</a>
+      <ul>
+        <li><a href="#use-cases---where-to-use">Use-cases - where to use?</a></li>
+        <li><a href="#where-not-to-use">Where not to use?</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#sample-projects">Sample Projects</a></li>
+        <li><a href="#cloud">Cloud</a></li>
+        <li><a href="#integration-1">Integration</a></li>
+        <li><a href="#local-setup">Local Setup</a></li>
+        <li><a href="#common-commands">Common Commands</a></li>
+        <li><a href="#parquet-handling">PARQUET handling</a></li>
+        <li><a href="#iceberg-handling">ICEBERG handling</a></li>
+        <li><a href="#reference-datasets">Reference Datasets</a></li>
+        <li><a href="#motherduck-ui">Motherduck UI</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

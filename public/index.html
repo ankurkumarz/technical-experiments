@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+	<meta name="generator" content="Hugo 0.123.8"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Knowledge book of technical experiments # Purpose # The intent is to share insights from the experimentation carried out in the different technical focus areas. This is an opinionated view by Ankur Kumar based on his experience of using the different technologies. Areas Covered # Quick introduction to the technology Key Architecture &amp; Design Details/Links How to set up locally? Key learning and takeaway from the technical evaulation (consider it opinionated by Ankur Kumar) Focus Areas # - Cloud Native Technologies - DevOps, GitOps - Microservices - NOSQL databases - Cloud Services - SaaS, Serverless, Managed Services - Kubernetes - Containerization Solutions, Tools, Utils - Mobile Solutions - Low-code Solutions - Web3 - AI &amp; Machine Learning - Open Source Software Generative AI Experiments # Runway - Generating images/videos using AI Lamini AI - Enterprise AI Platform with tuning, inference, etc.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Introduction" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+
+<title>Introduction | Technical Experiments by Ankur Kumar</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.84a547e6c6922b35f9e978aa9e201a238d61af2d29a88d7207c953ef0f60eff9.js" integrity="sha256-hKVH5saSKzX56XiqniAaI41hry0pqI1yB8lT7w9g7/k=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Technical Experiments by Ankur Kumar" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_NT0hQeNW085ZHeuydRws7677Z8Ptj5LJk9YwJH84baL',{api_host:'https://app.posthog.com'})
+</script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Technical Experiments by Ankur Kumar</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Microservices</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/dapr/" class="">Dapr</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/microservices/linkerd/" class="">Linkerd</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Observability</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/grafana/" class="">Grafana</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/observability/prometheus/" class="">Prometheus</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Programming</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/programming/rust-webassembly/" class="">Rust Webassembly</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Workflow</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/workflow/camunda/" class="">Camunda</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Engineering</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dbt/" class="">Dbt</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/dremio/" class="">Dremio</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/duckdb/" class="">Duckdb</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/dataengineering/unitycatalog/" class="">Unitycatalog</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Data Science &amp; ML</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/datascience/metaflow/" class="">Metaflow</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>DevOps/GitOps</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/argocd/" class="">Argo CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/fluxcd/" class="">Flux CD</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/jenkins/" class="">Jenkins</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/sonarqube/" class="">Sonarqube</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/devops/terraform/" class="">Terraform</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Gen AI</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/llmware/" class="">Llmware</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langgraph/" class="">LangGraph</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/langsmith/" class="">LangSmith</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/nemo-guardrails/" class="">NeMo Guardrails</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/wand/" class="">Weights &amp; Biases</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/genai/zenml/" class="">ZenML</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/" class="">Low-code Development Platform (LCDP)</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lowcodeplatforms/outsystems/" class="">Outsystems</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Platforms</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/backstage/" class="">Backstage</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/hasura/" class="">Hasura</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/platforms/salesforce/" class="">Salesforce</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Serverless</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/momento/" class="">Momento</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/serverless/openfaas/" class="">OpenFaaS</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Introduction</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#knowledge-book-of-technical-experiments">Knowledge book of technical experiments</a>
+      <ul>
+        <li><a href="#focus-areas">Focus Areas</a></li>
+        <li><a href="#generative-ai-experiments">Generative AI Experiments</a>
+          <ul>
+            <li><a href="#llm-observability">LLM Observability</a></li>
+          </ul>
+        </li>
+        <li><a href="#data-engineering-experiments">Data Engineering Experiments</a></li>
+        <li><a href="#pending-list-to-experiment">Pending List to Experiment</a></li>
+        <li><a href="#developer-portals">Developer Portals</a></li>
+        <li><a href="#learning-portals">Learning Portals</a></li>
+        <li><a href="#books-to-read">Books (To Read)</a></li>
+        <li><a href="#books-read-so-far">Books (Read so far)</a></li>
+        <li><a href="#contributors">Contributors</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="knowledge-book-of-technical-experiments">
+  Knowledge book of technical experiments
+  <a class="anchor" href="#knowledge-book-of-technical-experiments">#</a>
+</h1>
+<div class="book-columns flex flex-wrap">
+
+  <div class="flex-even markdown-inner">
+    <h2 id="purpose">
+  Purpose
+  <a class="anchor" href="#purpose">#</a>
+</h2>
+<ul>
+<li>The intent is to share insights from the experimentation carried out in the different technical focus areas.</li>
+<li>This is an opinionated view by <strong>Ankur Kumar</strong> based on his experience of using the different technologies.</li>
+</ul>
+
+  </div>
+
+  <div class="flex-even markdown-inner">
+    <h2 id="areas-covered">
+  Areas Covered
+  <a class="anchor" href="#areas-covered">#</a>
+</h2>
+<ul>
+<li>Quick introduction to the technology</li>
+<li>Key Architecture &amp; Design Details/Links</li>
+<li>How to set up locally?</li>
+<li>Key learning and takeaway from the technical evaulation (consider it opinionated by <em>Ankur Kumar</em>)</li>
+</ul>
+
+  </div>
+
+</div>
+
+<h2 id="focus-areas">
+  Focus Areas
+  <a class="anchor" href="#focus-areas">#</a>
+</h2>
+<pre tabindex="0"><code>- Cloud Native Technologies
+- DevOps, GitOps
+- Microservices
+- NOSQL databases
+- Cloud Services - SaaS, Serverless, Managed Services
+- Kubernetes - Containerization Solutions, Tools, Utils
+- Mobile Solutions
+- Low-code Solutions
+- Web3
+- AI &amp; Machine Learning
+- Open Source Software
+</code></pre><h2 id="generative-ai-experiments">
+  Generative AI Experiments
+  <a class="anchor" href="#generative-ai-experiments">#</a>
+</h2>
+<ul>
+<li><a href="https://runwayml.com/">Runway</a> - Generating images/videos using AI</li>
+<li><a href="https://lamini.ai/">Lamini AI</a> - Enterprise AI Platform with tuning, inference, etc.</li>
+<li><a href="https://www.groq.com/">Groq</a> - AI Inference Platform</li>
+<li><a href="https://holistic.ai/">Holistic AI</a> - Enterprise AI Governance</li>
+<li><a href="https://voyageai.com/">Voyage AI</a> - Search and Retrieval for Unstructured Data</li>
+<li><a href="https://www.glean.ai/">Glean AI</a> - Enterprise AI Platform with Search, Assistant, Apps, Prompt Lib, Workplace Search, etc.</li>
+<li><a href="https://www.comet.com/">Comet</a> - End-to-end model evaluation platform for AI developers,</li>
+<li><a href="https://dataloop.ai/">Dataloop AI</a> - Enterprise AI Platform with DataOps/LLMOps, Agents, etc.</li>
+<li><a href="https://www.baseten.co/">Baseten</a> – Deploy AI models in production, AI Inference</li>
+<li><a href="https://neuralmagic.com/">Neural Magic</a> - AI inference using vLLM (quantized)</li>
+<li><a href="https://www.tigergraph.com/">TigerGraph</a> - Graph analytics and AI</li>
+<li><a href="https://sambanova.ai/">Sambanova</a> - AI Inference Platform</li>
+<li><a href="https://www.datastax.com/">Datastax</a> - AI Platform, Astra DB, Langflow</li>
+<li><a href="https://www.deeplite.ai/">Deeplite</a> - Optimized AI model for edge</li>
+<li><a href="https://iki.ai/">Iki.ai</a> - Research assistant</li>
+<li><a href="https://writer.com/">Write</a> - AI Writing Platform with AI Studio, KG, etc.</li>
+<li><a href="https://bloop.ai/">Bloop AI</a> - Legacy code modernization</li>
+<li><a href="https://www.credo.ai/">Credo AI</a> - AI Governance</li>
+<li><a href="https://www.vellum.ai/">Vellum AI</a> - Prompting, Orchestration, Evaluations, etc.</li>
+<li><a href="https://github.com/kserve/kserve">KServe</a> - Standardized Serverless ML Inference Platform on Kubernetes</li>
+<li><a href="https://clear.ml/">ClearML</a> - LLMOps &amp; MLOps Development Lifecycle</li>
+<li>Products in <a href="https://insideainews.com/2024/10/22/the-insideai-news-impact-50-list-for-q4-2024/?">AI Top 50</a></li>
+</ul>
+<h3 id="llm-observability">
+  LLM Observability
+  <a class="anchor" href="#llm-observability">#</a>
+</h3>
+<ul>
+<li><a href="https://www.fiddler.ai/">Fiddler AI</a></li>
+<li><a href="https://arize.com/">Arize AI</a></li>
+</ul>
+<h2 id="data-engineering-experiments">
+  Data Engineering Experiments
+  <a class="anchor" href="#data-engineering-experiments">#</a>
+</h2>
+<ul>
+<li><a href="https://lakefs.io/">LakeFS</a></li>
+</ul>
+<h2 id="pending-list-to-experiment">
+  Pending List to Experiment
+  <a class="anchor" href="#pending-list-to-experiment">#</a>
+</h2>
+<ul>
+<li>[WunderGraph] (<a href="https://wundergraph.com/">https://wundergraph.com/</a>)</li>
+<li><a href="https://www.kasten.io/">Kasten by Veeam</a> - K8S Backup</li>
+<li><a href="https://calisti.app/">Calisti</a> - Service Mesh Manager By Cisco</li>
+<li><a href="https://panoptica.app/">Panoptica</a> - Robust security from CI/CD to runtime providing a single pane of glass for Container, Kubernetes, Service Mesh, &amp; API security - by Cisco</li>
+<li><a href="https://telescope.app/">Telescope</a> - Cloud-Native Application Troubleshooting (OpenTelemtry based) by Cisco</li>
+<li><a href="https://www.huaweicloud.com/intl/en-us/about/CloudNative.html">Huawei Cloud-native</a> - Cloud Native 2.0 offerings</li>
+<li><a href="https://www.argon.io/">Argon Security</a> - Software Supply Chain Security</li>
+<li><a href="https://www.cockroachlabs.com/">Cockroach DB</a> - Distributed Cloud SQL DB by Ex-Google Folks</li>
+<li><a href="https://goteleport.com/">Teleport</a> - secure access to SSH servers, Kubernetes clusters, PostgreSQL databases and web apps behind NAT</li>
+<li><a href="https://konghq.com/kong-mesh">Kong Service Mesh</a> - Service Mesh</li>
+<li><a href="https://www.logdna.com/">LogDNA</a> - Log Analysis</li>
+<li><a href="https://www.timescale.com/">Timescale</a> - Opensource RDBMS (PostgreSQL based) for time-series data</li>
+<li><a href="https://app.getambassador.io/cloud/">Ambassador Cloud</a> - K8S Cluster Management</li>
+<li><a href="https://crate.io/">Create DB</a> - The distributed, open source, SQL database
+enabling data insights at scale</li>
+<li><a href="https://www.honeycomb.io/">Honeycomb</a> - Cloud-native observability</li>
+<li><a href="https://www.influxdata.com/get-influxdb/">InfluxDB Cloud</a> - time series database as a service</li>
+<li><a href="https://www.kubecost.com/">Kubecost</a> - real-time cost visibility and insights for teams using Kubernetes</li>
+<li><a href="https://lightstep.com/">Lightstep</a> - Monitoring, observability, and incident response for the world’s most reliable systems</li>
+<li><a href="https://golang.ch/a-golang-based-database-ci-cd-solution-for-developers-and-dbas/">Bytebase</a>- CI/CD solution for database</li>
+</ul>
+<h2 id="developer-portals">
+  Developer Portals
+  <a class="anchor" href="#developer-portals">#</a>
+</h2>
+<ul>
+<li><a href="https://backstage.io">Backstage</a></li>
+<li><a href="https://humanitec.com/">Humantic</a></li>
+<li><a href="https://developer.cisco.com/">Cisco Devnet</a></li>
+<li><a href="https://developer.axoniq.io/">AxonIQ Dev Portal</a></li>
+<li><a href="https://cloud.hasura.io/projects">Hasura Cloud</a></li>
+<li><a href="https://ankurkumarz.grafana.net/login">Grafana Portal</a></li>
+</ul>
+<h2 id="learning-portals">
+  Learning Portals
+  <a class="anchor" href="#learning-portals">#</a>
+</h2>
+<ul>
+<li><a href="https://learning.oreilly.com/home/">Oreilly Learning</a></li>
+<li><a href="https://www.cloudskillsboost.google/">Google Cloud Skills Boost</a></li>
+<li><a href="https://docs.microsoft.com/en-us/learn/">Azure Learning</a></li>
+<li><a href="https://sapient.udemy.com/">Udemy</a></li>
+<li><a href="https://academy.tetrate.io/">Tetrate Academy</a></li>
+<li><a href="whizlabs.com">Whizlabs</a></li>
+<li><a href="https://www.devopsinstitute.com/">DevOps Institute</a></li>
+</ul>
+<h2 id="books-to-read">
+  Books (To Read)
+  <a class="anchor" href="#books-to-read">#</a>
+</h2>
+<ul>
+<li><a href="https://itrevolution.com/the-phoenix-project/">The Phoenix Project</a> - A Novel About IT, DevOps, and Helping Your Business Win</li>
+<li><a href="https://itrevolution.com/team-topologies/">Team Topologies</a> - Organizing Business and Technology Teams for Fast Flow</li>
+<li><a href="https://github.com/release-it/release-it">Release It!: Design and Deploy Production-Ready Software</a></li>
+<li><a href="https://sre.google/sre-book/table-of-contents/">Site Reliability Engineering</a></li>
+<li><a href="https://sre.google/books/">Building Secure &amp; Reliable Systems</a></li>
+<li><a href="https://evolutionaryarchitecture.com/">Build Evolutionary Architecture</a></li>
+<li>Software Architecture: The Hard Parts</li>
+<li><a href="https://www.oreilly.com/library/view/building-event-driven-microservices/9781492057888/">Event Driven Microservices</a></li>
+<li><a href="https://www.oreilly.com/library/view/data-mesh/9781492092384/">Data Mesh</a></li>
+<li><a href="https://learning.oreilly.com/library/view/learning-domain-driven-design/9781098100124/">Learning Domain-Driven Design</a></li>
+<li><a href="https://learning.oreilly.com/library/view/building-microservices-2nd/9781492034018/">Building Microservices</a></li>
+</ul>
+<h2 id="books-read-so-far">
+  Books (Read so far)
+  <a class="anchor" href="#books-read-so-far">#</a>
+</h2>
+<p>2022</p>
+<ul>
+<li><a href="https://itrevolution.com/accelerate-book/">Acclerate</a> - The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations</li>
+<li><a href="https://architectelevator.com/">The Architect Elevator</a></li>
+</ul>
+<p>Earlier</p>
+<ul>
+<li><a href="https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=30264">Software Architecture in Practice</a></li>
+<li><a href="https://www.viewpoints-and-perspectives.info/">Software Systems Architecture - Viewpoints &amp; Perspectives</a></li>
+<li><a href="https://martinfowler.com/books/eaa.html">Patterns of Enterprise Application Architecture</a></li>
+<li>Gang of Four Design Patterns</li>
+<li>TOGAF 9.0 Foundation</li>
+<li>97 Things Every Software Architect Should Know</li>
+<li><a href="https://www.sei.cmu.edu/education-outreach/courses/course.cfm?coursecode=P33">Documenting Software Architecture</a></li>
+<li>Head First Design Patterns</li>
+<li><a href="https://martinfowler.com/books/uml.html">UML Distilled</a></li>
+<li>Effective Java</li>
+<li>Core Java</li>
+<li>Enterprise JavaBeans</li>
+<li>Computer Networks (Tanebaum)</li>
+</ul>
+<h2 id="contributors">
+  Contributors
+  <a class="anchor" href="#contributors">#</a>
+</h2>
+<ul>
+<li><a href="https://github.com/ankurkumarz">Ankur Kumar</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#knowledge-book-of-technical-experiments">Knowledge book of technical experiments</a>
+      <ul>
+        <li><a href="#focus-areas">Focus Areas</a></li>
+        <li><a href="#generative-ai-experiments">Generative AI Experiments</a>
+          <ul>
+            <li><a href="#llm-observability">LLM Observability</a></li>
+          </ul>
+        </li>
+        <li><a href="#data-engineering-experiments">Data Engineering Experiments</a></li>
+        <li><a href="#pending-list-to-experiment">Pending List to Experiment</a></li>
+        <li><a href="#developer-portals">Developer Portals</a></li>
+        <li><a href="#learning-portals">Learning Portals</a></li>
+        <li><a href="#books-to-read">Books (To Read)</a></li>
+        <li><a href="#books-read-so-far">Books (Read so far)</a></li>
+        <li><a href="#contributors">Contributors</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

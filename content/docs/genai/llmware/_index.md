@@ -1,3 +1,5 @@
+# LLMWare
+
 ## Context
 
 - [LLMWare](https://llmware-ai.github.io/llmware/) is a unified framework for building enterprise RAG pipelines with small, specialized models

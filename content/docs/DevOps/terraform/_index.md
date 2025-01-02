@@ -1,7 +1,8 @@
 ---
 title: Terraform
 ---
-# Terraform
+
+## Terraform
 
 - Terraform is HashiCorp's infrastructure as code tool. It lets you define resources and infrastructure in human-readable, declarative configuration files, and manages your infrastructure's lifecycle. 
 - It supports multiple cloud providers - AWS, Azure, GCP, Oracle Cloud, and others (1K+ providers).

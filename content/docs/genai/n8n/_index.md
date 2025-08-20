@@ -1,8 +1,3 @@
----
-bookFlatSection: true
-title: N8N
----
-
 ## Context
 
 - [N8N](https://n8n.io/) has emerged as one of the most popular workflow-based GenAI solution to build automation for ITOps, SecOps, DevOps, and business-focused orchestration pipelines.

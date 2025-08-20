@@ -58,7 +58,8 @@ N8N_SSL_CERT=./client.crt
 N8N_PROTOCOL=https
 ```
 
--
+- Start N8N with Remote PostgreSQL and SSL
+
 ```
 cd /Users/<user_id>/sandbox/genai/n8n
 export $(grep -v '^#' .env | xargs) && npx n8n

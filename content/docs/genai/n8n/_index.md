@@ -67,6 +67,7 @@ export $(grep -v '^#' .env | xargs) && npx n8n
 
 - Registered using Gmail and Password
 
+## Complex Workflow with N8N
 
 ## Sample Workflow for Chat using Local Ollama Model (DeepSeek)
 
